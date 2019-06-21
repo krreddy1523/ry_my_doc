@@ -1,0 +1,55 @@
+mysqldump -h daxmark.railyatri.in -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production common_surveys | mysql -h yatrastage.railyatri.in -udbmaster -prailyatri@qwerty@123 railyatri_production
+
+
+
+gsutil -m cp -r * gs://ry-server-logs/railyatri_web_1/railyatri_web_1/
+
+
+perl mysqltuner.pl --host daxmark.railyatri.in --user readonly --pass '!PatvmqT_1'  --forcemem 110000 >> prod_recommendations.txt
+
+
+ps -e -o %mem,%cpu,cmd | grep mysql | awk '{memory+=$1;cpu+=$2} END {print memory,cpu}'
+
+sudo rm -rf train_ticket_user_token_histories_10062018.sql.gz
+
+
+mysqldump -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123--single-transaction --quick railyatri_production_large_tables train_ticket_user_token_histories_10062018 | /bin/gzip > /logs/train_ticket_user_token_histories_10062018.sql.gz
+
+
+
+mysql -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123
+
+
+ mysqldump -h daxmark.railyatri.in -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production common_surveys | mysql -h yatrastage.railyatri.in -udbmaster -prailyatri@qwerty@123 railyatri_production
+
+
+
+show databases;
+
+ 
+
+SELECT table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024 / 1024), 2) `Size in GB` FROM information_schema.TABLES WHERE table_schema = "test";
+
+SELECT table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024 / 1024), 2) `Size` FROM information_schema.TABLES WHERE table_schema = "coa_productio" order by Size desc;
+
+ry-lage  rylarge-rep-google  
+ry-analysis ryanalysis-replica
+ry-yatra  yatra-replica
+DB-prod prodb-replica
+
+
+
+cat other_vhosts_access.log | awk '{print $1}' | wc -l
+
+ netstat -tunlap | grep apache | grep EST
+
+
+130.211.125.82 m
+35.239.202.13  s1
+146.148.111.130 s2
+
+/opt/redis/redis-stable/sentinel.log
+
+
+
+

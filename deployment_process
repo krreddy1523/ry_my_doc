@@ -1,0 +1,186 @@
+pipeline
+
+Currently cap commaind doing thing in bellow
+
+1 git:wrapper
+
+mkdir -p /tmp
+
+Uploading /tmp/git-ssh-live_status-production_1_as-ubuntu.sh
+
+chmod 700 /tmp/git-ssh-live_status-production_1_as-ubuntu.sh
+
+2 git:check
+
+git ls-remote git@git.assembla.com:railyatri.live_status_5.git HEAD
+
+3  deploy:check:directories
+ 
+mkdir -p /u/apps/live_status/shared /u/apps/live_status/releases
+
+4 deploy:check:linked_dirs
+
+mkdir -p /u/apps/live_status/shared/log /u/apps/live_status/shared/tmp/pids /u/apps/live_status/shared/tmp/cache /u/apps/live_status/shared/tmp/sockets /u/apps/live_status/shared/vendor/bundle
+
+5  deploy:check:make_linked_dirs
+
+mkdir -p /u/apps/live_status/shared/config /u/apps/live_status/shared/config/locales
+
+6  git:clone
+
+git:clone
+      The repository mirror is at /u/apps/live_status/repo
+
+7 git:update
+
+git remote set-url origin git@git.assembla.com:railyatri.live_status_5.git
+
+git remote update --prune
+
+8 git:create_release
+
+mkdir -p /u/apps/live_status/releases/20190426121125
+
+git archive master | /usr/bin/env tar -x -f - -C /u/apps/live_status/releases/20190426121125
+
+9  deploy:set_current_revision
+
+echo "fc0088ea95781d4513c36cbd636262239a902711" > REVISION
+
+10 deploy:symlink:linked_files
+
+mkdir -p /u/apps/live_status/releases/20190426121125/config /u/apps/live_status/releases/20190426121125/config/locales
+
+rm /u/apps/live_status/releases/20190426121125/config/database.yml
+
+11 deploy:symlink:linked_dirs
+
+mkdir -p /u/apps/live_status/releases/20190426121125 /u/apps/live_status/releases/20190426121125/tmp /u/apps/live_status/releases/20190426121125/vendor
+
+rm -rf /u/apps/live_status/releases/20190426121125/log
+
+12 bundler:install
+
+bundle install --path /u/apps/live_status/shared/bundle --jobs 4 --without development test --deployment --quiet
+
+13 deploy:symlink:release
+
+ln -s /u/apps/live_status/releases/20190426121125 /u/apps/live_status/releases/current
+
+mv /u/apps/live_status/releases/current /u/apps/live_status
+
+14 deploy:restart
+
+touch /u/apps/live_status/releases/20190426121125/tmp/restart.txt
+
+15 deploy:cleanup
+
+Keeping 5 of 6 deployed releases on scaleset_ls_5
+       rm -rf /u/apps/live_status/releases/20190426054817
+
+16 deploy:log_revision
+
+ echo "Branch master (at fc0088ea95781d4513c36cbd636262239a902711) deployed as release 20190426121125 by ubuntu" >> /u/apps/live_status/revisions.log
+
+done
+
+
+
+over all output
+
+
+00:00 git:wrapper
+      01 mkdir -p /tmp
+    ✔ 01 scaleset_ls_5 0.457s
+      Uploading /tmp/git-ssh-live_status-production_1_as-ubuntu.sh 100.0%
+      02 chmod 700 /tmp/git-ssh-live_status-production_1_as-ubuntu.sh
+    ✔ 02 scaleset_ls_5 0.048s
+00:00 git:check
+      01 git ls-remote git@git.assembla.com:railyatri.live_status_5.git HEAD
+      01 fc0088ea95781d4513c36cbd636262239a902711	HEAD
+    ✔ 01 scaleset_ls_5 4.073s
+00:04 deploy:check:directories
+      01 mkdir -p /u/apps/live_status/shared /u/apps/live_status/releases
+    ✔ 01 scaleset_ls_5 0.048s
+00:04 deploy:check:linked_dirs
+      01 mkdir -p /u/apps/live_status/shared/log /u/apps/live_status/shared/tmp/pids /u/apps/live_status/shared/tmp/cache /u/apps/live_status/shared/tmp/sockets /u/apps/live_status/shared/vendor/bundle
+    ✔ 01 scaleset_ls_5 0.047s
+00:04 deploy:check:make_linked_dirs
+      01 mkdir -p /u/apps/live_status/shared/config /u/apps/live_status/shared/config/locales
+    ✔ 01 scaleset_ls_5 0.046s
+00:05 git:clone
+      The repository mirror is at /u/apps/live_status/repo
+00:05 git:update
+      01 git remote set-url origin git@git.assembla.com:railyatri.live_status_5.git
+    ✔ 01 scaleset_ls_5 0.154s
+      02 git remote update --prune
+      02 Fetching origin
+    ✔ 02 scaleset_ls_5 3.789s
+00:09 git:create_release
+      01 mkdir -p /u/apps/live_status/releases/20190426121125
+    ✔ 01 scaleset_ls_5 0.052s
+      02 git archive master | /usr/bin/env tar -x -f - -C /u/apps/live_status/releases/20190426121125
+    ✔ 02 scaleset_ls_5 0.291s
+00:09 deploy:set_current_revision
+      01 echo "fc0088ea95781d4513c36cbd636262239a902711" > REVISION
+    ✔ 01 scaleset_ls_5 0.050s
+00:09 deploy:symlink:linked_files
+      01 mkdir -p /u/apps/live_status/releases/20190426121125/config /u/apps/live_status/releases/20190426121125/config/locales
+    ✔ 01 scaleset_ls_5 0.049s
+      02 rm /u/apps/live_status/releases/20190426121125/config/database.yml
+    ✔ 02 scaleset_ls_5 0.049s
+      03 ln -s /u/apps/live_status/shared/config/database.yml /u/apps/live_status/releases/20190426121125/config/database.yml
+    ✔ 03 scaleset_ls_5 0.048s
+      04 rm /u/apps/live_status/releases/20190426121125/config/mongo.yml
+    ✔ 04 scaleset_ls_5 0.051s
+      05 ln -s /u/apps/live_status/shared/config/mongo.yml /u/apps/live_status/releases/20190426121125/config/mongo.yml
+    ✔ 05 scaleset_ls_5 0.048s
+      06 rm /u/apps/live_status/releases/20190426121125/config/secrets.yml
+    ✔ 06 scaleset_ls_5 0.049s
+      07 ln -s /u/apps/live_status/shared/config/secrets.yml /u/apps/live_status/releases/20190426121125/config/secrets.yml
+    ✔ 07 scaleset_ls_5 0.047s
+      08 rm /u/apps/live_status/releases/20190426121125/config/email.yml
+    ✔ 08 scaleset_ls_5 0.049s
+      09 ln -s /u/apps/live_status/shared/config/email.yml /u/apps/live_status/releases/20190426121125/config/email.yml
+    ✔ 09 scaleset_ls_5 0.047s
+      10 rm /u/apps/live_status/releases/20190426121125/config/redis.yml
+    ✔ 10 scaleset_ls_5 0.049s
+      11 ln -s /u/apps/live_status/shared/config/redis.yml /u/apps/live_status/releases/20190426121125/config/redis.yml
+    ✔ 11 scaleset_ls_5 0.047s
+      12 rm /u/apps/live_status/releases/20190426121125/config/locales/message.yml
+    ✔ 12 scaleset_ls_5 0.048s
+      13 ln -s /u/apps/live_status/shared/config/locales/message.yml /u/apps/live_status/releases/20190426121125/config/locales/message.yml
+    ✔ 13 scaleset_ls_5 0.047s
+00:11 deploy:symlink:linked_dirs
+      01 mkdir -p /u/apps/live_status/releases/20190426121125 /u/apps/live_status/releases/20190426121125/tmp /u/apps/live_status/releases/20190426121125/vendor
+    ✔ 01 scaleset_ls_5 0.046s
+      02 rm -rf /u/apps/live_status/releases/20190426121125/log
+    ✔ 02 scaleset_ls_5 0.048s
+      03 ln -s /u/apps/live_status/shared/log /u/apps/live_status/releases/20190426121125/log
+    ✔ 03 scaleset_ls_5 0.047s
+      04 ln -s /u/apps/live_status/shared/tmp/pids /u/apps/live_status/releases/20190426121125/tmp/pids
+    ✔ 04 scaleset_ls_5 0.047s
+      05 ln -s /u/apps/live_status/shared/tmp/cache /u/apps/live_status/releases/20190426121125/tmp/cache
+    ✔ 05 scaleset_ls_5 0.046s
+      06 ln -s /u/apps/live_status/shared/tmp/sockets /u/apps/live_status/releases/20190426121125/tmp/sockets
+    ✔ 06 scaleset_ls_5 0.049s
+      07 ln -s /u/apps/live_status/shared/vendor/bundle /u/apps/live_status/releases/20190426121125/vendor/bundle
+    ✔ 07 scaleset_ls_5 0.049s
+00:12 bundler:install
+      01 bundle install --path /u/apps/live_status/shared/bundle --jobs 4 --without development test --deployment --quiet
+    ✔ 01 scaleset_ls_5 1.504s
+00:14 deploy:symlink:release
+      01 ln -s /u/apps/live_status/releases/20190426121125 /u/apps/live_status/releases/current
+    ✔ 01 scaleset_ls_5 0.045s
+      02 mv /u/apps/live_status/releases/current /u/apps/live_status
+    ✔ 02 scaleset_ls_5 0.050s
+00:14 deploy:restart
+      01 touch /u/apps/live_status/releases/20190426121125/tmp/restart.txt
+    ✔ 01 scaleset_ls_5 0.089s
+00:14 deploy:cleanup
+      Keeping 5 of 6 deployed releases on scaleset_ls_5
+      01 rm -rf /u/apps/live_status/releases/20190426054817
+    ✔ 01 scaleset_ls_5 0.202s
+00:14 deploy:log_revision
+      01 echo "Branch master (at fc0088ea95781d4513c36cbd636262239a902711) deployed as release 20190426121125 by ubuntu" >> /u/apps/live_status/revisions.log
+    ✔ 01 scaleset_ls_5 0.048s

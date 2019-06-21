@@ -1,0 +1,49 @@
+                                               
+                                                   Scale Set for script
+
+#!/bin/sh
+
+Host=new_vm
+filename="${Host}"
+ num=0
+ while [ -f $filename ]; do
+    num=$(( $num + 1 ))
+    filename="filename{num}"
+ done
+
+az vm create -n $filename -g loadbalancer --image /subscriptions/f936f200-78a9-4f25-ae9e-9632a1a5670c/resourceGroups/Images/providers/Microsoft.Compute/images/latestruby --availability-set loadtest --generate-ssh-keys
+
+
+
+az vm nic list -g loadbalancer --vm-name loadtest3 | grep "id" | awk {' print $2'} | tr '/' '\n' | tail -n1 
+
+az vm nic list -g loadbalancer --vm-name loadtest1 | grep "id" | awk {' print $2'} | tr '/' '\n' | tail -n1 |tail -n1 |  tr ',' ' ' | tr '"' ' '
+
+
+
+az network nic ip-config list --nic-name loadtest4VMNic --resource-group loadbalancer --out table | awk 'NR==3 {print $1}'
+
+
+
+az network nic ip-config address-pool add --resource-group loadbalancer --nic-name loadtest5VMNic --ip-config-name ipconfigloadtest5 --lb-name load --address-pool loadbackend
+
+ssh scaleset_ls_3 'sh /home/ubuntu/script/ram.sh' | awk 'NR==1{printf $3}'
+
+
+
+
+
+ssh mobile-api-server-10 sudo rm -rf /u/apps/railyatri_mobile_api_10/current/public/test.txt && sleep 60 &&
+ scp /home/ubuntu/config/*.yml mobile-api-server-10:/u/apps/railyatri_mobile_api_10/shared/config/ &&
+ eval $(ssh-agent) && ssh-add &&'
+ cd /u/apps/railyatri.mobile_api_server && cap production_10 deploy && 
+ssh mobile-api-server-10 cat /u/apps/railyatri_mobile_api_10/current/public/test.txt &&
+ curl  52.172.131.132/test.txt?[1-2] && 
+curl  52.172.131.132/api/home.json?[1-5]
+
+
+
+az network lb show -g Production -n apilbnew | grep "api"
+
+
+az vm delete -g loadbalancer -n loadtest4 --yes

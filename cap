@@ -1,0 +1,12 @@
+
+Capistrano remove
+
+https://www.howtoinstall.co/en/ubuntu/xenial/capistrano?action=remove
+
+Capistrano installation process
+
+https://www.digitalocean.com/community/tutorials/how-to-use-capistrano-to-automate-deployments-getting-started
+
+after installing latest version run belo commaind
+
+ sudo gem install capistrono-bundler

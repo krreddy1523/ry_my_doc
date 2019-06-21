@@ -1,0 +1,94 @@
+pipeline{
+    agent any
+
+     parameters{
+        gitperameters branchfile: 'origin/(.*)', defaultvalue: 'master', name: 'BRANCH', type: 'branchname'
+      }
+     stages{
+        stage('deployment process'){
+            steps{
+                sh"""
+                   #!/bin/bash
+
+                    // deployment comainds
+                         ssh deployer:/
+           }
+
+             
+
+    stages{
+        stage('checkout') {
+            steps{
+                checkout changelog: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gitlab-opstree', url: 'https://gitlab.com/arunkundrupu/springhibernate3.git']]]
+    }   }
+        stage('Build') {
+            steps{
+                withMaven(jdk: 'Java8', maven: 'M2_HOME') {
+                sh 'cd Spring3HibernateApp; mvn clean compile'
+            }
+    }   }
+        stage('Test') {
+            steps{
+                withMaven(jdk: 'Java8', maven: 'M2_HOME') {
+                sh 'cd Spring3HibernateApp; mvn clean test cobertura:cobertura'
+                publishCoverage adapters: [coberturaAdapter('Spring3HibernateApp/target/site/cobertura/coverage.xml')], sourceFileResolver: sourceFiles('NEVER_STORE')
+               }
+            }
+            }
+        }
+}
+
+
+pipeline{
+    agent any
+    stages{
+     
+     stage('copying files'){
+         
+         steps{
+             sh '''
+              
+              #!/bin/bash
+              
+            #  ssh deployer-azure ' scp /home/ubuntu/config/*.yml scaleset_ls_4:/u/apps/live_status/shared/config '
+              
+      '''        
+         }
+         
+     }  
+     
+    stage (' Process to depolying '){
+        
+             steps {
+                 
+                 sh '''
+                 
+                 # ssh scaleset_ls_4 ' cd /u/apps/live_status/current && eval $(ssh-agent) && ssh-add && source ~/.rvm/scripts/rvm && cd /u/apps/railyatri.live_status_5 && cap production_ss1 deploy '
+                 ssh scaleset_ls_4 ' cd /u/apps/live_status/current  && cap production_ss deploy '                  
+
+                  '''
+                 
+             }
+        
+    }
+    
+     stage (process check){
+         
+         steps {
+             
+             sh """
+
+             ssh scaleset_ls_4 ' curl localhost/api/home.json?[1-10] '
+             
+        #     ssh deployer-azure ' cd /u/apps/railyatri.live_status_5 && cap production_ss3 deploy'
+                  
+                  """
+         }
+         
+     }
+     
+        
+    }
+    
+}
+

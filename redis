@@ -1,0 +1,974 @@
+ubuntu@redis-server:~$ history 
+    1  cd /u/ap
+    2  ls
+    3  cd /u/ap
+    4  s
+    5  exit
+    6  sudo apt-get update
+    7  sudo apt-get install tcl8.5
+    8  wget http://download.redis.io/releases/redis-3.2.10.tar.gz
+    9  ll
+   10  ls
+   11  tar xzf redis-3.2.10.tar.gz
+   12  cd redis-3.2.10/
+   13  make
+   14  make test
+   15  sudo make install
+   16  cd utils
+   17  sudo ./install_server.sh
+   18  exit
+   19  wget http://download.redis.io/releases/redis-3.2.10.tar.gz
+   20  ls
+   21  sudo apt install build-essential tcl
+   22  apt show redis-server
+   23  sudo apt install redis-server
+   24  redis-cli
+   25  redis-cli -v
+   26  redis-server -v
+   27  cd /etc/redis/
+   28  ls
+   29  vi redis.conf 
+   30  ll
+   31  sudo mv redis.conf redis.conf_bak
+   32  sudo vi redis.conf
+   33  sudo service redis-server stop
+   34  sudo service redis-server start
+   35  redis-cli
+   36  redis-cli 127.0.0.1:9393
+   37  redis-cli -h 0.0.0.0 -p 9393
+   38  cd /var/lib/
+   39  ls
+   40  cd redis/
+   41  ls
+   42  ll
+   43  crontab -l
+   44  sudo su
+   45  cd /var/log
+   46  cd redis/
+   47  ll
+   48  tail -f redis-server.log 
+   49  sudo tail -f redis-server.log 
+   50  sudo su
+   51  history
+   52  redis-cli -h 0.0.0.0 -p 9393
+   53  sudo service redis-server stop
+   54  sudo service redis-server start
+   55  redis-cli -h 0.0.0.0 -p 9393
+   56  cd /var/log/redis/
+   57  cat redis-server.log 
+   58  tail -f redis-server.log 
+   59  sudo su
+   60  df -Th
+   61  free -m
+   62  exit
+   63  sudo dpkg-reconfigure tzdata
+   64  cd /etc
+   65  sud vi security/limits.conf 
+   66  sudo vi security/limits.conf 
+   67  sudo vi sysctl.conf 
+   68  sudo su
+   69  top
+   70  df -lh
+   71  ps aux
+   72  cd /var/lo
+   73  cd /var/log
+   74  ls
+   75  cd redis/
+   76  ls
+   77  tail -f redis-server.log
+   78  sudo su
+   79  exit
+   80  history
+   81  exit
+   82  df -Th
+   83  sudo passenger-status
+   84  df -Th
+   85  cd /etc/security/
+   86  cat limits.conf 
+   87  cd /etc/
+   88  sudo vi sysctl.conf 
+   89  cd redis/
+   90  ls
+   91  cat redis.conf
+   92  cd..
+   93  sudo su
+   94  redis -v
+   95  history
+   96  ps aux
+   97  top
+   98  free -m
+   99  netstat -anp --tcp --udp | grep redis
+  100  sudo su
+  101  ks
+  102  ls
+  103  exit
+  104  ls
+  105  cd /var/lib/
+  106  ls
+  107  crontab -,
+  108  crontab -l
+  109  sudo su
+  110  exit
+  111  ls
+  112  ll
+  113  sudo chown -R ubuntu:ubuntu dump.rdb 
+  114  ll
+  115  cd .ssh/
+  116  vi config
+  117  cd /etc/redis/
+  118  cat redis.conf
+  119  exit
+  120  sudo su
+  121  sudo cd /var/lib/redis/
+  122  sudo su
+  123  ulimit -n
+  124  df -lh
+  125  top
+  126  exit
+  127  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  128  exit
+  129  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  130  exit
+  131  df -Th
+  132  cd /var/log/redis/
+  133  ls
+  134  tail -f redis-server.log
+  135  sudo su
+  136  exit
+  137  free -m
+  138  top
+  139  ll
+  140  df -Th
+  141  free -m
+  142  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  143  lll
+  144  ll
+  145  sudo apt-get install bsd-mailx
+  146  ll
+  147  ca monitor.sh 
+  148  cat monitor.sh 
+  149  vim monitor.sh 
+  150  cat monitor.sh 
+  151  ll
+  152  sudo apt-get install bsd-mailx
+  153  sudo passenger-status
+  154  df Th
+  155  df -Th
+  156  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  157  exit
+  158  free -m
+  159  top
+  160  exit
+  161  ll
+  162  vim queue.sh
+  163  chmod 777 queue.sh 
+  164  ll
+  165  crontab -l
+  166  crontab -e
+  167  crontab -l
+  168  ll
+  169  sudo apt-get install bsd-mailx
+  170  vim queue.sh 
+  171  history
+  172  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  173  exit
+  174  history
+  175  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  176  exit
+  177  ls
+  178  history
+  179  redis-cli -h 0.0.0.0 -p 9393
+  180  exit
+  181  top
+  182  ll
+  183  cd /var/lib/
+  184  ls
+  185  cd redis/
+  186  ll
+  187  sudo su
+  188  history
+  189  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  190  exit
+  191  sudo vi /etc/sysctl.conf 
+  192  sudo sysctl -p
+  193  exit
+  194  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  195  sudo su
+  196  exit
+  197  crontab -l
+  198  sudo su
+  199  cd /etc/redis/
+  200  cat redis.conf
+  201  cd /var/log/redis/
+  202  sudo su
+  203  ll
+  204  cat /etc/redis/redis.conf
+  205  date
+  206  exit
+  207  history
+  208  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  209  exit
+  210  sudo vi /etc/sysctl.conf 
+  211  exit
+  212  ls
+  213  history
+  214  df -Th
+  215  history
+  216  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  217  exit
+  218  top
+  219  exit
+  220  cd /var/log/
+  221  ls
+  222  cd redis/
+  223  ls
+  224  tail -f redis-server.log
+  225  sudo su
+  226  history
+  227  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  228  ls
+  229  redis-cli -h 0.0.0.0 -p 9393 KEYS *timeout*
+  230  redis-cli -h 0.0.0.0 -p 9393 GET *timeout*
+  231  redis-cli -h 0.0.0.0 -p 9393 GET timeout
+  232  redis-cli -h 0.0.0.0 -p 9393 config GET timeout
+  233  redis-cli -h 0.0.0.0 -p 9393 config SET timeout 360
+  234  redis-cli -h 0.0.0.0 -p 9393 config GET timeout
+  235  redis-cli -h 0.0.0.0 -p 9393 client list
+  236  redis-cli -h 0.0.0.0 -p 9393 config GET keepalive
+  237  redis-cli -h 0.0.0.0 -p 9393 config GET *keepalive*
+  238  redis-cli -h 0.0.0.0 -p 9393 config SET tcp-keepalive 360 | wc -l
+  239  redis-cli -h 0.0.0.0 -p 9393 config GET *keepalive*
+  240  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  241  redis-cli -h 0.0.0.0 -p 9393 config GET *connection*
+  242  redis-cli -h 0.0.0.0 -p 9393 config GET max-connection
+  243  ulimit -n
+  244  ulimit -Hn
+  245  ps -aux | grep redis
+  246  cat /proc/1348/limits
+  247  clear
+  248  cat /proc/1348/limits
+  249  cd /etc/security/
+  250  sudo vi limits.conf 
+  251  sudo vi /etc/sysctl.conf 
+  252  sudo sysctl -p 
+  253  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  254  redis-cli -h 0.0.0.0 -p 9393 client list
+  255  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  256  redis-cli -h 0.0.0.0 -p 9393 config GET *keepalive*
+  257  redis-cli -h 0.0.0.0 -p 9393 config GET *timeout* 
+  258  redis-cli -h 0.0.0.0 -p 9393 config SET timeout 360
+  259  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  260  redis-cli -h 0.0.0.0 -p 9393 client list
+  261  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  262  exit
+  263  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  264  redis-cli -h 0.0.0.0 -p 9393 client list
+  265  redis-cli -h 0.0.0.0 -p 9393 config SET timeout 240
+  266  redis-cli -h 0.0.0.0 -p 9393 config SET tcp-keepalive 120
+  267  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  268  exit
+  269  cd /var/log/redis/
+  270  ll
+  271  tail -f redis-server.log
+  272  sudo su
+  273  history
+  274  exit
+  275  free -m
+  276  top
+  277  free -m
+  278  top
+  279  crontab -e
+  280  sudo su
+  281  exit
+  282  history
+  283  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  284  clear
+  285  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  286  exit
+  287  free -m
+  288  cd /var/log/
+  289  ls
+  290  tail -f redis/redis-server.log
+  291  sudo tail -f redis/redis-server.log
+  292  exit
+  293  history
+  294  exit
+  295  history
+  296  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_1001968_1002078*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  297  exit
+  298  free -m
+  299  top
+  300  exit
+  301  redis-cli -h 0.0.0.0 -p 9393
+  302  w
+  303  cd /var/log/
+  304  ls
+  305  cd redis/
+  306  ls
+  307  tail -f redis-server.log
+  308  sudo su
+  309  exit
+  310  sudo apt-get install pmm-client
+  311  wget https://repo.percona.com/apt/percona-release_0.1-4.$(lsb_release -sc)_all.deb
+  312  sudo dpkg -i percona-release_0.1-4.$(lsb_release -sc)_all.deb
+  313  sudo apt-get update
+  314  sudo apt-cache search percona
+  315  sudo apt-get install pmm-client
+  316  exit
+  317  ifconfig
+  318  sudo pmm-admin config --server 52.172.219.101 --server-user ryadmin --server-password h0use0frailyatri --client-address 52.172.194.17 --bind-address 10.5.7.4
+  319  sudo pmm-admin add external:service redis
+  320  sudo pmm-admin add external:service redis --help
+  321  sudo pmm-admin add external:service redis --service-port 9393 redis-server
+  322  redis-cli -h 127.0.0.1 -p 9393
+  323  ls
+  324  ll
+  325  crontab -e
+  326  free -m
+  327  sudo crontab -e
+  328  exit
+  329  df -Th
+  330  free -m
+  331  cd //var/log/redis/
+  332  ls
+  333  tail -f redis-server.log
+  334  sudo su
+  335  top
+  336  exit
+  337  redis-cli -h 127.0.0.1 -p 9393
+  338  exit
+  339  cd /etc/redis/
+  340  ll
+  341  cat redis.conf
+  342  ulimit -n
+  343  cd /etc/
+  344  cat sysctl.conf 
+  345  cat security/limits.conf 
+  346  cd /var/log/redis/
+  347  ll
+  348  tail -f redis-server.log
+  349  sudo su
+  350  df -Th
+  351  free -mh
+  352  df -Th
+  353  free -mh
+  354  df -Th
+  355  free -mh
+  356  redis-cli -h 127.0.0.1 -p 9393
+  357  df -Th
+  358  exit
+  359  df -Th
+  360  free -mh
+  361  history
+  362  exit
+  363  df -Th
+  364  free -mh
+  365  df -Th
+  366  free -mh
+  367  df -Th
+  368  free -mh
+  369  df -Th
+  370  free -mh
+  371  ll
+  372  sudo passe-s
+  373  df -Th
+  374  free -mh
+  375  df -Th
+  376  free -mh
+  377  df -Th
+  378  free -mh
+  379  df -Th
+  380  free -mh
+  381  sudo crontab -l
+  382  sudo redis-cli -p 9393 BGSAVE
+  383  cd /var/log/redis/
+  384  ll
+  385  tail -f redis-server.log
+  386  suod tail -f redis-server.log
+  387  sudo tail -f redis-server.log
+  388  exit
+  389  redis-cli -h 127.0.0.1 -p 9393
+  390  cd /var/log/redis/
+  391  sudo tail -f redis-server.log
+  392  df -Th
+  393  free -mh
+  394  df -Th
+  395  free -mh
+  396  df -Th
+  397  cd /var/log/redis/
+  398  ll
+  399  tail -f redis-server.log
+  400  sudo su
+  401  df -Th
+  402  free -mh
+  403  cat queue.sh 
+  404  df -Th
+  405  free -mh
+  406  sudo passe-s
+  407  df -Th
+  408  free -m
+  409  df -Th
+  410  free -mh
+  411  df -Th
+  412  free -mh
+  413  df -Th
+  414  free -mh
+  415  sudo passe-s
+  416  df -Th
+  417  free -mh
+  418  df -Th
+  419  free -mh
+  420  df -Th
+  421  free -mh
+  422  df -Th
+  423  free -mh
+  424  ll
+  425  vim queue.sh 
+  426  df -Th
+  427  free -mh
+  428  df -Th
+  429  free -mh
+  430  df -Th
+  431  free -mh
+  432  sudo passeEWIP
+  433  free -mh
+  434  df -Th
+  435  free -mh
+  436  history | grep redis
+  437  redis-cli -h 0.0.0.0 -p 9393 KEYS *station_alerts_production*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  438  df -Th
+  439  cd /var/log/redis/
+  440  ll
+  441  tail -f redis-server.log
+  442  sudo su
+  443  df -Th
+  444  free -mh
+  445  df -Th
+  446  free -mh
+  447  df -Th
+  448  free -mh
+  449  df -Th
+  450  free -mh
+  451  free -m
+  452  top
+  453  df -Th
+  454  free -mh
+  455  top
+  456  free -mh
+  457  df -Th
+  458  cd /var/log/
+  459  ls
+  460  cd redis/
+  461  ls
+  462  ll
+  463  tail -f redis-server.log
+  464  sudo su
+  465  eexit
+  466  exit
+  467  sudo bash -c "$(curl -sSL https://files.appoptics.com/appoptics-host-agent-installer.sh)" -s --token b1decc8d2d18f1ed44dba22723403248a988d4767fd5759131247a71f5726c7f
+  468  cd /opt/
+  469  ls
+  470  cd appoptics/
+  471  ls
+  472  cd etc/
+  473  ls
+  474  cd plugins.d/
+  475  ls
+  476  sudo cp /opt/appoptics/etc/plugins.d/redis.yaml.example /opt/appoptics/etc/plugins.d/redis.yaml
+  477  ls
+  478  sudo vi redis.yaml
+  479  history
+  480  sudo vi redis.yaml
+  481  sudo service appoptics-snapteld restart
+  482  exit
+  483  cd /var/log/redis/
+  484  sudo su
+  485  sudo passenger-status
+  486  cd /var/log/redis/
+  487  sudo su
+  488  top
+  489  exit
+  490  free -m
+  491  df -Th
+  492  exit
+  493  cd /var/log/
+  494  cat syslog
+  495  ll
+  496  cd /var/log/
+  497  sudo su
+  498  sf -Th
+  499  df -Th
+  500  free -m
+  501  df -Th
+  502  cat syslog | grep cannot allocate"
+  503  cat syslog | grep "cannot allocate"
+  504  ll
+  505  free -m
+  506  top
+  507  cd /var/log/
+  508  sudo su
+  509  cd /var/log/redis/
+  510  ls
+  511  ll
+  512  ll -h
+  513  head -200 redis-server.log
+  514  sudo su
+  515  cd /var/log/
+  516  head -f syslog
+  517  tail -f syslog
+  518  tail -1000 syslog
+  519  free -m
+  520  df -Th
+  521  ll
+  522  free -m
+  523  sudo fallocate -l 8G /swapfile
+  524  sudo chmod 600 /swapfile
+  525  sudo mkswap /swapfile
+  526  sudo swapon /swapfile
+  527  sudo swapon --show
+  528  sudo sysctl vm.swappiness=10
+  529  sudo sysctl vm.vfs_cache_pressure=50
+  530  free -m
+  531  cd /etc/
+  532  sudo vi fstab
+  533  cat fstab
+  534  free -m
+  535  top
+  536  free -m
+  537  exit
+  538  free -m
+  539  exit
+  540  free -m
+  541  cd /etc
+  542  cat sysctl.conf 
+  543  ulimit -n
+  544  sudo su
+  545  redis-cli -h 0.0.0.0 -p 9393
+  546  free -m
+  547  top
+  548  redis-cli -h 0.0.0.0 -p 9393
+  549  ulimit -n
+  550  cd /tec
+  551  cd /etc
+  552  cat security/limits.conf 
+  553  cd /etc/
+  554  cat sysctl.conf 
+  555  ulimit
+  556  sudo su
+  557  redis-cli -h 0.0.0.0 -p 9393
+  558  ulimit -Sn
+  559  free -m
+  560  redis-cli -h 0.0.0.0 -p 9393
+  561  free -m
+  562  top
+  563  free -m
+  564  redis-cli -h 0.0.0.0 -p 9393
+  565  redis-cli -h 0.0.0.0 -p 9393
+  566  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  567  free -m
+  568  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  569  redis-cli -h 0.0.0.0 -p 9393 config get SO_KEEPALIVE
+  570  redis-cli -h 0.0.0.0 -p 9393
+  571  cd /var/log/redis/
+  572  cat redis-server.log | grep Error
+  573  sudo su
+  574  redis-cli -h 0.0.0.0 -p 9393
+  575  sudo su
+  576  free -m
+  577  top
+  578  free -m
+  579  redis-cli -h 0.0.0.0 -p 9393
+  580  sudo su
+  581  free -m
+  582  ll
+  583  du -sh *
+  584  exit
+  585  free -m
+  586  df -Th
+  587  cd /
+  588  sudo su
+  589  redis-cli -h 0.0.0.0 -p 9393
+  590  history
+  591  pwd
+  592  cd /home/ubuntu/
+  593  redis-cli -h 0.0.0.0 -p 9393 keys '*' >rediskeys.csv
+  594  history
+  595  redis-cli -h 0.0.0.0 -p 9393 KEYS *redbus_route_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  596  redis-cli -h 0.0.0.0 -p 9393 KEYS *ir_seat_*
+  597  exit
+  598  du -sh *
+  599  free -m
+  600  du -sh *
+  601  ll
+  602  free -m
+  603  cd /var/log/redis/
+  604  sudo su
+  605  free -m
+  606  exit
+  607  cd /var/log/redis/
+  608  sudo su
+  609  free -m
+  610  top
+  611  sudo su
+  612  free -m
+  613  exit
+  614  free -m
+  615  irb
+  616  exit
+  617  free -m
+  618  df -Th
+  619  exit
+  620  redis-cli -h 0.0.0.0 -p 9393
+  621  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  622  free -m
+  623  top
+  624  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  625  free -m
+  626  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  627  free -m
+  628  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  629  free -m
+  630  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  631  cd /var/log/redis/
+  632  ls
+  633  ll
+  634  ll -h
+  635  redis-cli -h 0.0.0.0 -p 9393 monitor
+  636  sudo crontab -e
+  637  top
+  638  redis-cli -h 0.0.0.0 -p 9393 config get maxmemory
+  639  redis-cli -h 0.0.0.0 -p 9393 config set maxmemory 9GB
+  640  redis-cli -h 0.0.0.0 -p 9393 config set maxmemory 9000GB
+  641  redis-cli -h 0.0.0.0 -p 9393 config set maxmemory 9000B
+  642  redis-cli -h 0.0.0.0 -p 9393 config set maxmemory 9663676416
+  643  redis-cli -h 0.0.0.0 -p 9393 config set maxmemory 0
+  644  free -m
+  645  watch free -m 
+  646  sudo su
+  647  sudo su
+  648  sudo su
+  649  sudo su
+  650  sudo su
+  651  sudo su
+  652  sudo passenger-status
+  653  free -m
+  654  cd /var/log/redis/
+  655  sudo su
+  656  exit
+  657  exit
+  658  exit
+  659  ls
+  660  cd /lib/security/
+  661  sudo apt-get install --reinstall libpam-systemd
+  662  cd /lib/security/
+  663  free -m
+  664  exit
+  665  cd /var/log/redis/
+  666  sudo su
+  667  cd /var/log/redis/
+  668  sudo si
+  669  sudo su
+  670  ssh mongonew
+  671  free -m
+  672  df -Th
+  673  cd /var/log/
+  674  cd redis/
+  675  ll
+  676  tail -f redis-server.log
+  677  sudo su
+  678  free -m
+  679  df -Th
+  680  ll
+  681  vim monitor.sh 
+  682  vim queue.sh 
+  683  history
+  684  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  685  exit
+  686  df -Th
+  687  free -m
+  688  history
+  689  redis-cli -h 0.0.0.0 -p 9393 KEYS *_20190120
+  690  redis-cli -h 0.0.0.0 -p 9393 KEYS *_20190111
+  691  redis-cli -h 0.0.0.0 -p 9393 KEYS *_20190112
+  692  redis-cli -h 0.0.0.0 -p 9393 KEYS *_20190113
+  693  redis-cli -h 0.0.0.0 -p 9393 KEYS *_20190114
+  694  redis-cli -h 0.0.0.0 -p 9393 KEYS *_20190115
+  695  redis-cli -h 0.0.0.0 -p 9393 KEYS *_20190116
+  696  redis-cli -h 0.0.0.0 -p 9393 KEYS *_201901*
+  697  redis-cli -h 0.0.0.0 -p 9393 KEYS *_201901* | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  698  redis-cli -h 0.0.0.0 -p 9393 KEYS *_2019020*
+  699  redis-cli -h 0.0.0.0 -p 9393 KEYS *_2019020* | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  700  redis-cli -h 0.0.0.0 -p 9393 KEYS *_2019021* | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  701  redis-cli -h 0.0.0.0 -p 9393 KEYS *trains_between_station*
+  702  exit
+  703  cd /var/log/redis/
+  704  sudo su
+  705  history
+  706  cd /var/log/redis/
+  707  sudo su
+  708  ll
+  709  exit
+  710  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  711  exit
+  712  sudo su
+  713  redis-cli -h 0.0.0.0 -p 9393
+  714  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  715  top
+  716  free -m
+  717  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  718  redis-cli -h 0.0.0.0 -p 9393
+  719  exit
+  720  l
+  721  vim monitor.sh 
+  722  vim queue.sh 
+  723  history
+  724  redis-cli -h 0.0.0.0 -p 9393 KEYS smart_bus_driver_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  725  exit
+  726  df -Th
+  727  history
+  728  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  729  df -Th
+  730  free -mh
+  731  history
+  732  redis-cli -h 0.0.0.0 -p 9393 KEYS *_1005922_1005618_* | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  733  redis-cli -h 0.0.0.0 -p 9393 KEYS *_1005922_1005692_* | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  734  exit
+  735  history
+  736  history | grep "trips"
+  737  redis-cli -h 0.0.0.0 -p 9393 KEYS *bus_available_trips_*  | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  738  redis-cli -h 0.0.0.0 -p 9393 KEYS *_1005922_1005692_* | xargs redis-cli -h 0.0.0.0 -p 9393 DEL
+  739  df -Th
+  740  free -mh
+  741  history
+  742  redis-cli -h 0.0.0.0 -p 9393
+  743  history
+  744  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  745  df -Th
+  746  redis-cli -h 0.0.0.0 -p 9393
+  747  redis-cli
+  748  redis-cli -h 0.0.0.0 -p 9393
+  749  history | grep redis
+  750  sudo service redis-server start
+  751  redis-cli -h 0.0.0.0 -p 9393
+  752  sudo service redis-server start
+  753  redis-cli -h 0.0.0.0 -p 9393
+  754  redis-cli
+  755  redis-cli -h 0.0.0.0 -p 9393
+  756  sudo service redis start
+  757  redis-cli -h 0.0.0.0 -p 9393
+  758  sudo service redis-server start
+  759  redis-cli -h 0.0.0.0 -p 9393
+  760  top
+  761  free -mh
+  762  df -Th
+  763  redis-cli -h 0.0.0.0 -p 9393
+  764  df -Th
+  765  free -mh
+  766  redis-cli -h 0.0.0.0 -p 9393
+  767  sudo service redis-server start
+  768  redis-cli -h 0.0.0.0 -p 9393
+  769  free -mh
+  770  df -Th
+  771  redis-cli -h 0.0.0.0 -p 9393
+  772  sudo service redis start
+  773  sudo services redis start
+  774  sudo service redis start
+  775  redis-cli -h 0.0.0.0 -p 9393
+  776  sudo service redis start
+  777  redis service
+  778  history
+  779  sudo service redis-server start
+  780  redis-cli -h 0.0.0.0 -p 9393
+  781  df -Th
+  782  free -mh
+  783  redis-cli -h 0.0.0.0 -p 9393
+  784  sudo service redis-server start
+  785  redis-cli -h 0.0.0.0 -p 9393
+  786  history
+  787  df -Th
+  788  free -mh
+  789  vim test.sh
+  790  sudo chmod 777 test.sh 
+  791  ./test.sh 
+  792  free -mh
+  793  df -Th
+  794  top
+  795  redis-cli -h 0.0.0.0 -p 9393
+  796  cd /var/log/
+  797  ll
+  798  cd redis/
+  799  ll
+  800  tail -f redis-server.log
+  801  sudo tail -f redis-server.log
+  802  top
+  803  free -mh
+  804  ll
+  805  cat redis-status.txt 
+  806  cat cat redis-status.sh 
+  807  pwd
+  808  redis-cli -h 0.0.0.0 -p 9393
+  809  vim test.sh 
+  810  redis-cli ping
+  811  sudo redis-cli ping
+  812  redis-cli -h 0.0.0.0 -p 9393 ping
+  813  redis-cli -h 0.0.0.0 -p 9393 ping > test.txt
+  814  echo $test.txt
+  815  test=$(redis-cli -h 0.0.0.0 -p 9393 ping)
+  816  echo $test
+  817  ll
+  818  vim test.sh 
+  819  ./test.sh 
+  820  ll
+  821  pwd
+  822  vim test.sh 
+  823  ./test.sh 
+  824  ll
+  825  vim test.sh 
+  826  ./test.sh 
+  827  vim test.sh 
+  828  ./test.sh 
+  829  vim test.sh 
+  830  ./test.sh 
+  831  vim test.sh 
+  832  ./test.sh 
+  833  vim test.sh 
+  834  ./test.sh 
+  835  vim test.sh 
+  836  ./test.sh 
+  837  vim test.sh 
+  838  ./test.sh 
+  839  vim test.sh 
+  840  ./test.sh 
+  841  vim test.sh 
+  842  lll
+  843  ll
+  844  cat redis-status.txt 
+  845  ./test.sh 
+  846  cat redis-status.txt 
+  847  vim test.sh 
+  848  ./test.sh 
+  849  vim test.sh 
+  850  ./test.sh 
+  851  cat redis-status.txt 
+  852  vim test.sh 
+  853  ./test.sh 
+  854  cat redis-status.txt 
+  855  > redis-status.txt 
+  856  ./test.sh 
+  857  cat redis-status.txt 
+  858  vim test.sh 
+  859  ./test.sh 
+  860  cat redis-status.txt 
+  861  ./test.sh 
+  862  cat redis-status.txt 
+  863  vim test.sh 
+  864  ll
+  865  mv test.sh redis-status.sh
+  866  ll
+  867  cat redis-status.sh 
+  868  crontab -e
+  869  sudo rm -r test.txt 
+  870  ll
+  871  cat redis-status.txt 
+  872  vim clear-redis-status.txt.sh
+  873  sudo chmod 777 clear-redis-status.txt.sh 
+  874  ./clear-redis-status.txt.sh 
+  875  cat redis-status.txt 
+  876  vim clear-redis-status.txt.sh
+  877  ./clear-redis-status.txt.sh 
+  878  ll
+  879  cat redis-status.txt 
+  880  vim clear-redis-status.txt.sh
+  881  vim redis-status.sh 
+  882  cat redis-status.sh 
+  883  history
+  884  ll
+  885  cat clear_redis-status.txt 
+  886  vim clear-redis-status.txt.sh 
+  887  ./clear-redis-status.txt.sh 
+  888  cat clear_redis-status.txt 
+  889  cat redis-status.txt 
+  890  crontab -e
+  891  crontab -l
+  892  vim clear-redis-status.txt.sh 
+  893  cat clear-redis-status.txt.sh 
+  894  free -mh
+  895  top 
+  896  redis-cli -h 0.0.0.0 -p 9393 ping > test.txt
+  897  sudo service redis-server start
+  898  redis-cli
+  899  redis-cli -h 0.0.0.0 -p 9393
+  900  redis-cli -h 0.0.0.0 -p 9393 ping > test.txt
+  901  crontab -l
+  902  nano redis-status.sh 
+  903  ll
+  904  nano test.txt 
+  905  nano redis-status.txt 
+  906  nano .rediscli_history 
+  907  ll
+  908  ls
+  909  nano clear-redis-status.txt.sh 
+  910  nano  clear-redis-status.txt
+  911  nano  clear_redis-status.txt 
+  912  date
+  913  redis-cli -h 0.0.0.0 -p 9393
+  914  free -mh
+  915  top
+  916  redis-cli -h 0.0.0.0 -p 9393
+  917  $ src/redis-server configFile_6381.conf
+  918  ll
+  919  nano clear_redis-status.txt 
+  920  history
+  921  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  922  redis-cli -h 0.0.0.0 -p 9393 client list
+  923  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  924  history
+  925  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  926  history
+  927  redis-cli -h 0.0.0.0 -p 9393 client list | wc -l
+  928  redis-cli -h 0.0.0.0 -p 9393
+  929  ll
+  930  cat clear_redis-status.txt 
+  931  cat redis-status.sh 
+  932  top
+  933  free -hm
+  934  ll
+  935  cd redis-3.2.10/
+  936  ll
+  937  cd deps/
+  938  ll
+  939  cat update-jemalloc.sh 
+  940  cd ../..
+  941  ll
+  942  crontab -l
+  943  free -hm
+  944  fdisk -l
+  945  ll
+  946  cd redis-3.2.10/
+  947  ll
+  948  cat BUGS 
+  949  cd src/
+  950  ll
+  951  cat mkreleasehdr.sh 
+  952  cat redis-trib.rb 
+  953  cd ..
+  954  ll
+  955  cd deps/
+  956  ll
+  957  cd jemalloc/
+  958  ll
+  959  cd ..
+  960  ll
+  961  cd ..
+  962  ll
+  963  cd utils/
+  964  ll
+  965  cd create-cluster/
+  966  ll
+  967  cat create-cluster 
+  968  cd ..
+  969  ;;
+  970  ll
+  971  cd hs
+  972  cd hashtable/
+

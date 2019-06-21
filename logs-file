@@ -1,0 +1,31 @@
+how to search and how to find logs in logs folder
+
+In deployer-azure server
+
+cd /logs/railyatri_web_1/railyatri_web_1
+
+sudo tar -xvf production_2019_05_14_03_00.log.tgz -O | grep -w "F,"
+
+
+sudo tar -xvf production_2019_05_14_03_00.log.tgz -O | grep -w "Internal Server Error" | wc -l ( count of 500 )
+
+sudo tar -xvf production_2019_05_14_03_00.log.tgz -O | grep -w "Internal Server Error" -A 20 >> /home/ubuntu/log.txt  ( To send to logs in logs folder to log.txt file)
+
+echo "****************************************************************************************************************" >> /home/ubuntu/log.txt
+
+
+echo "****************************************************web-2 server*************************************************" >> /home/ubuntu/log.txt
+
+
+
+
+scp /home/rajasekharreddy/.ssh/azure.pem deployer-azure:/home/ubuntu/log2.txt .  (to capy the log file deployer to our local server)
+
+
+
+tail -f production.log | grep 'F,'
+
+
+tar -xvf production_2019_05_20_15_00.log.tgz -O | grep '1558349572'
+
+cat log/payment_exceptions.log | grep '1559636450_153471514905' -C 10

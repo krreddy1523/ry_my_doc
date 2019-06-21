@@ -1,0 +1,111 @@
+https://console.cloud.google.com
+
+
+
+sudo nano /opt/nginx/conf/sites-enabled/live_status
+
+netstat -ap | grep http (finding port)
+
+jenkins admin password
+
+/home/rajasekharreddy/.jenkins/secrets/initialAdminPassword
+
+scp /home/ubuntu/config/*.yml scaleset_pnr_1:/u/apps/pnr_server/shared/config
+
+
+az vmss show --resource-group Production --name SSLivestatus
+
+sed -i 's/'40.81.226.77/ubuntu'/g' /home/ubuntu/.ssf/config
+
+sudo sed -i 's/'ryscaleset/livestatus'/g' /opt/nginx/conf/sites-enabled/live_status
+
+curl localhost/api/home.json?[1-10]
+
+ss status
+az vmss list-instances \
+    --resource-group Production \
+    --name SSLivestatus \
+    --output table
+
+ scale set reimage (old)
+
+az vmss update --name SSLivestatus --resource-group Production --set virtualMachineProfile.storageProfile.imageReference.id="/subscriptions/f936f200-78a9-4f25-ae9e-9632a1a5670c/resourceGroups/Production/providers/Microsoft.Compute/images/sslsimage-20190425191748"
+
+scale set reimage (new)
+
+az vmss update --name SSLivestatus --resource-group Production --set virtualMachineProfile.storageProfile.imageReference.id="/subscriptions/f936f200-78a9-4f25-ae9e-9632a1a5670c/resourceGroups/Production/providers/Microsoft.Compute/images/sslsimage-image-20190430161931"
+
+scale set reimage (new 01/05)
+
+az vmss update --name SSLivestatus --resource-group Production --set virtualMachineProfile.storageProfile.imageReference.id="/subscriptions/f936f200-78a9-4f25-ae9e-9632a1a5670c/resourceGroups/Production/providers/Microsoft.Compute/images/ssls-image-20190520"
+
+instance status
+
+az vm get-instance-view --name demofortestting --resource-group ss_live_status --query instanceView.statuses[1] --output table
+
+sslsimage-image-20190422172620
+
+PNR commains
+ scp /home/ubuntu/config/*.yml pnr-server-2-ind-5:/u/apps/pnr_server/shared/config/ 
+ eval $(ssh-agent) && ssh-add 
+ source ~/.rvm/scripts/rvm 
+ cd /u/apps/railyatri.pnr_server_rails5 && cap pnr_production_2 deploy
+
+/var/lib/jenkins/secrets/initialAdminPassword
+
+if [ $count -eq 3 ]
+then
+
+  scp /home/ubuntu/config/*.yml testing1:/u/apps/live_status/shared/config	
+
+elif [ $count -eq 4 ]
+then
+
+scp /home/ubuntu/config/*.yml testing2:/u/apps/live_status/shared/config
+
+elif [ $count -eq 5 ]
+then
+
+     scp /home/ubuntu/config/*.yml testing3:/u/apps/live_status/shared/config
+
+elif [ $count -eq 6 ]
+then
+
+   scp /home/ubuntu/config/*.yml testing4:/u/apps/live_status/shared/config
+
+else
+  echo "done"
+fi
+
+
+scp /home/ubuntu/script/ma.sh deployer-azure:/home/ubuntu/rajasekhar/
+
+
+
+create your script file here
+#pwd
+/root
+
+#vim testfile.sh
+mkdir /root/hello
+touch /root/hello/file1
+:wq
+
+#chmod +x shut.sh
+
+#cp /root/testfile.sh /etc/init.d/shut
+#ln -s /etc/init.d/shut /etc/rc6.d/K00shut
+#ln -s /etc/init.d/shut /etc/rc0.d/K00shut
+#vim /etc/rc.local
+#!/bin/bash -e
+sh /home/ubuntu/script/testfile.sh
+exit 0
+
+:wq
+
+#init 6
+
+pnr
+4811107078
+4603937141
+

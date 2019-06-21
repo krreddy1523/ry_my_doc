@@ -1,0 +1,14 @@
+
+                                                                                       sar comm for last 10 mins cpu
+
+apt-get install –yes sysstat
+
+ vim /etc/default/sysstat
+
+ENABLED="true"
+
+/etc/init.d/sysstat restart
+
+sar
+
+http://www.pc-freak.net/blog/sysstat-file-directory-fix-debian-linux/

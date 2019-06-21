@@ -1,0 +1,109 @@
+passenger_max_pool_size 70;
+server {
+  passenger_min_instances 15;
+  listen   80;
+  server_name livestatus.railyatri.in;
+  access_log  /u/apps/live_status/shared/log/access.log;
+  root   /u/apps/live_status/current/public;
+	####################Mox Gateway Changes############################
+        location / {
+
+                proxy_set_header Host livestatus.railyatri.in;
+
+                if ($http_lang ~ (Hindi|Bengali|Gujarati|Marathi) ) {
+
+                        proxy_pass http://52.172.131.235$request_uri;
+                }
+                root /u/apps/live_status/current/public;
+
+        }
+        ###################################################################
+
+server {
+  listen 80;
+  server_name livestatus.railyatri.in;
+  location / {
+    return 301 https://www.railyatri.in/m/livestatus;
+}
+}
+
+
+# serve static content directly
+  location ~* \.(ico|jpg|gif|png|css|js|swf|html)$ {
+    if (-f $request_filename) {
+    expires max;
+    break;
+  }
+  }
+  location ~ \.(php|aspx|asp) {
+	return 404;
+}
+  passenger_enabled on;
+  # deny access to .htaccess files, if Apache's document root
+  # concurs with nginx's one
+  location ~ /\.ht {
+    deny  all;
+  }
+}
+#HTTPS Server
+server {
+        listen       443;
+        server_name livestatus.railyatri.in;
+ssl     on;
+        ssl_certificate /opt/nginx/ssl/railyatri.in.chained.crt;
+        ssl_certificate_key /opt/nginx/ssl/railyatri.key;
+access_log  /u/apps/live_status/shared/log/access.log;
+  root   /u/apps/live_status/current/public;
+
+        autoindex on;
+        passenger_enabled on;
+
+# serve static content directly
+  location ~* \.(ico|jpg|gif|png|css|js|swf|html)$ {
+    if (-f $request_filename) {
+    expires max;
+    break;
+  }
+  }
+	####################Mox Gateway Changes############################
+        location / {
+
+                proxy_set_header Host livestatus.railyatri.in;
+
+                if ($http_lang ~ (Hindi|Bengali|Gujarati|Marathi) ) {
+
+                        proxy_pass http://52.172.131.235$request_uri;
+                }
+                root /u/apps/live_status/current/public;
+
+        }
+
+        ###################################################################
+
+
+server {
+  listen 443 ssl;
+  server_name livestatus.railyatri.in;
+  location / {
+    return 301 https://www.railyatri.in/m/livestatus;
+
+}
+}
+
+  location ~ \.(php|aspx|asp) {
+        return 404;
+}
+  passenger_enabled on;
+  # deny access to .htaccess files, if Apache's document root
+  # concurs with nginx's one
+  location ~ /\.ht {
+    deny  all;
+  }
+
+
+     }
+passenger_pre_start /u/apps/live_status/current;
+
+
+
+

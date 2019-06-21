@@ -1,0 +1,213 @@
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+
+PATH=/usr/bin:/usr/local/bin
+
+#Mobile api logs
+42 04,16 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files mobile-api-server-1-ind:/logs/* /logs/railyatri_mobile_api_1/ > /tmp/api1.log 2>&1'
+07 05,17 * * * /bin/bash -l -c 'rsync -vrth --remove-source-files mobile-api-server-2-ind:/logs/* /logs/railyatri_mobile_api_2/ > /tmp/api2.log 2>&1'
+56 06,18 * * * /bin/bash -l -c 'rsync -vrth --remove-source-files mobile-api-server-3-ind:/logs/* /logs/railyatri_mobile_api_3/ > /tmp/api3.log 2>&1'
+12 07,19 * * * /bin/bash -l -c 'rsync -vrth --remove-source-files mobile-api-server-4-ind:/logs/* /logs/railyatri_mobile_api_4/ > /tmp/api4.log 2>&1'
+22 08,20 * * * /bin/bash -l -c 'rsync -vrth --remove-source-files mobile-api-server-5-ind:/logs/* /logs/railyatri_mobile_api_5/ > /tmp/api5.log 2>&1'
+15 09,21 * * * /bin/bash -l -c 'rsync -vrth --remove-source-files mobile-api-server-10:/logs/* /logs/railyatri_mobile_api_10/ > /tmp/api10.log 2>&1'
+04 00 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files mobile-api-server-food:/logs/* /logs/railyatri_mobile_api_food/ > /tmp/apifood.log 2>&1'
+04 01 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files bus-api-server-1-ind:/logs/* /logs/bus_api_server/ > /tmp/busapi.log 2>&1'
+06 01 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files bus-api-server-2-ind:/logs/* /logs/bus_api_server_2/ > /tmp/busapi.log 2>&1'
+08 01 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files bus-api-server-3-ind:/logs/* /logs/bus_api_server_3/ > /tmp/busapi.log 2>&1'
+30 01 */15 * * /bin/bash -l -c 'rsync -avrth --remove-source-files train-ticket-1-ind:/logs/* /logs/train_ticket_1/ > /tmp/train_ticket.log 2>&1'
+#10 02 */15 * * /bin/bash -l -c 'rsync -avrth --remove-source-files agent-server:/logs/* /logs/agent_server/ > /tmp/agent.log 2>&1'
+
+10 02 */15 * * /bin/bash -l -c 'rsync -avrth --remove-source-files agent-rails5:/logs/* /logs/agentrails_server/ > /tmp/agentrails.log 2>&1'
+
+04 11 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files marketing-camp-1:/logs/* /logs/marketing_campaign/ > /tmp/marketing.log 2>&1'
+
+10 12 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files marketing-camp-2:/logs/* /logs/marketing_campaign1/ > /tmp/marketing2.log 2>&1'
+
+10 12 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files marketing-camp-3:/logs/* /logs/marketing_campaign3/ > /tmp/marketing3.log 2>&1'
+
+15 04 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files railyatri-qbns-prod:/logs/* /logs/railyatri_qbns/ > /tmp/qbns 2>&1'
+
+
+15 10 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files busindia-api-server:/logs/* /logs/railyatri_busindia/ > /tmp/busindia.log 2>&1'
+#web server logs
+30 00 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files railyatri-web-1-ind-5:/logs/* /logs/railyatri_web_1/ > /tmp/web1.log 2>&1'
+40 00,12 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files railyatri-web-2-ind-5:/logs/* /logs/railyatri_web_2/ > /tmp/web2.log 2>&1'
+36 00 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files railyatri-web-3-ind-5:/logs/* /logs/railyatri_web_3/ > /tmp/web3.log 2>&1'
+40 01 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files railyatri-web-4-ind-5:/logs/* /logs/railyatri_web_4/ > /tmp/web4.log 2>&1'
+
+
+42 00 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files railyatri-web-5-ind-5:/logs/* /logs/railyatri_web_5/ > /tmp/web5.log 2>&1'
+00 22 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files railyatri-web-6-ind-5:/logs/* /logs/railyatri_web_6/ > /tmp/web6.log 2>&1'
+52 00 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files railyatri-web-7-ind-5:/logs/* /logs/railyatri_web_7/ > /tmp/web7.log 2>&1'
+
+52 01 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files railyatri-web-8-ind-5:/logs/* /logs/railyatri_web_8/ > /tmp/web8.log 2>&1'
+#pnr server logs
+05 01 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files pnr-server-1-ind-5:/logs/* /logs/pnr_server_1/ > /tmp/pnr1.log 2>&1'
+10 21 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files pnr-server-2-ind-5:/logs/* /logs/pnr_server_2/ > /tmp/pnr2.log 2>&1'
+10 22 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files pnr-rake-5:/logs/* /logs/pnr_rake/ > /tmp/pnrrake.log 2>&1'
+15 01 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files pnr-server-3-ind:/logs/* /logs/pnr_server_3/ > /tmp/pnr3.log 2>&1'
+20 01 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files pnr-server-4-ind:/logs/* /logs/pnr_server_4/ > /tmp/pnr4.log 2>&1'
+25 01 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files pnr-server-web-ind:/logs/* /logs/pnr_web/ > /tmp/pnrweb.log 2>&1'
+35 01 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files pnr-server-web-2-ind:/logs/* /logs/pnr-server-web-2-ind/ > /tmp/pnrweb2.log 2>&1'
+
+#search server logs
+00 01 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files search-server-ind:/logs/* /logs/search_server/ > /tmp/search.log 2>&1'
+
+00 01 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files payment-prod-new:/logs/* /logs/railyatri_payments/ > /tmp/payment.log 2>&1'
+
+#sa server logs
+40 17 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files sa-server-1-ind-5:/logs/* /logs/sa_server_1/ > /tmp/sa1.log 2>&1'
+45 17 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files sa-server-2-ind-5:/logs/* /logs/sa_server_2/ > /tmp/sa2.log 2>&1'
+55 17 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files sahtml-server-2-ind:/logs/* /logs/sahtml-server-2-ind/ > /tmp/sa2.log 2>&1'
+
+#Merchandise server logs
+35 02 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files merchandise-server-2-ind:/logs/* /logs/merchandise_server_2/ > /tmp/merchan2.log 2>&1'
+40 01 */1 * * /bin/bash -l -c 'rsync -avrth --remove-source-files merchandise:/logs/* /logs/merchandise/ > /tmp/merchan1.log 2>&1'
+
+# Scaleset for Live status logs
+00 */3 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files scaleset_ls_1:/logs/* /logs/ss_livestatus/scale1/ > /tmp/scalelog.log 2>&1'
+00 */1 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files scaleset_ls_2:/logs/* /logs/ss_livestatus/scale2/ > /tmp/scalelog.log 2>&1'
+*/15 * * * * /bin/bash -l -c 'rsync -avrth --remove-source-files scaleset_ls_3:/logs/* /logs/ss_livestatus/scale3/ > /tmp/scalelog.log 2>&1'
+*/15 * * * * /bin/bash -l -c 'rsync -avrth --remove-source-files scaleset_ls_4:/logs/* /logs/ss_livestatus/scale4/ > /tmp/scalelog.log 2>&1'
+
+00 */3 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files live-status-1-ind-5:/logs/* /logs/live_status_1/ > /tmp/live1.log 2>&1'
+00 */3 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files live-status-2-ind-5:/logs/* /logs/live_status_2/ > /tmp/live2.log 2>&1'
+14 22 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files live-status-3-ind-5:/logs/* /logs/live_status_3/ > /tmp/live3.log 2>&1'
+35 02 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files live-status-4-ind-5:/logs/* /logs/live_status_4/ > /tmp/live4.log 2>&1'
+*/2 * * * * /bin/bash check.sh | aha --black > index.html && sudo cp index.html /var/www/html/public/
+
+00 03 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files blog-google:/home/ubuntu/dump/* /logs/blog_backup/ > /tmp/blog_dump.log 2>&1'
+
+#Yatrachef Call Center Controllers/Views Backup
+
+00 03 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files yatra-call-new:/home/ubuntu/backup/* /logs/yatrachef_cc_backup/ > /tmp/yatra_dump.log 2>&1'
+
+#----Notification Server Log Sync-----#
+
+00 02 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files notification-1-azure:/logs/railyatri_notification/* /logs/railyatri_notification_1/railyatri_notification_1/ > /tmp/notification-1.log 2>&1'
+
+30 02 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files notification-2-azure:/logs/railyatri_notification/* /logs/railyatri_notification_2/railyatri_notification_2/ > /tmp/notification-2.log 2>&1'
+
+00 02 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files notification-1-azure:/logs/nginx/* /logs/railyatri_notification_1/nginx/ > /tmp/notification-1-nginx.log 2>&1'
+
+00 02 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files notification-2-azure:/logs/nginx/* /logs/railyatri_notification_2/nginx/ > /tmp/notification-2-nginx.log 2>&1'
+
+#AWS CLI TOOL TO STOP AND START INSTANCES
+
+#55 21 * * * /bin/sh /home/ubuntu/load_remove.sh
+#30 23 * * * /bin/sh /home/ubuntu/aws_stop.sh
+#25 09 * * * /bin/bash -l -c '/home/ubuntu/load_add.sh'
+#30 05 * * * /bin/sh /home/ubuntu/aws_start.sh
+#30 09 * * * /bin/sh /home/ubuntu/load_add.sh
+
+#Azure CLI TOOL TO START VM
+#30 05 * * * /home/ubuntu/azurestart.sh
+
+#* * * * * /home/ubuntu/scalein.sh >> /tmp/scale.log 2>&1
+
+*/25 * * * * mysql -h daxmark.railyatri.in -urailstager -pOmlL0G -A --skip-column-names -e"select concat('KILL ',id,';') from information_schema.processlist where COMMAND='Sleep' and TIME > 800;" > /tmp/dax.txt && mysql -h daxmark.railyatri.in -urailstager -pOmlL0G -A --skip-column-names -e"source /tmp/dax.txt;"
+
+* */1 * * * mysql -h yatrachef.railyatri.in -uroot -pyatrachef@qwerty123 -A --skip-column-names -e"select concat('KILL ',id,';') from information_schema.processlist where COMMAND='Sleep' and TIME > 200;" > /tmp/yatra.txt && mysql -h yatrachef.railyatri.in -uroot -pyatrachef@qwerty123 -A --skip-column-names -e"source /tmp/yatra.txt;"
+
+*/25 * * * * mysql -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123 -A --skip-column-names -e"select concat('KILL ',id,';') from information_schema.processlist where COMMAND='Sleep' and TIME > 600;" > /tmp/rylarge.txt && mysql -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123 -A --skip-column-names -e"source /tmp/rylarge.txt;"
+
+10 05 * * 2 mysqldump -h ryanalysis.railyatri.in -udatateam -pdatateam@321 ry_data_science_team ry_user_ecomm_profiles | mysql -h daxmark.railyatri.in -udbmaster -prailyatri_prodb@123 railyatri_production
+
+00 03 * * 2  mysqldump -h ryanalysis.railyatri.in -udatateam -pdatateam@321 ry_data_science_team ry_user_profiles | mysql -h daxmark.railyatri.in -udbmaster -prailyatri_prodb@123 railyatri_production
+
+05 08 * * * mysqldump -h ryanalysis.railyatri.in -udatateam -pdatateam@321 ry_data_science_team lucky_unlucky_pnrs | mysql -h daxmark.railyatri.in -udbmaster -prailyatri_prodb@123 railyatri_production
+
+11 04 * * 1 mysqldump -h ryanalysis.railyatri.in -udatateam -pdatateam@321 ry_data_science_team food_top_points | mysql -h daxmark.railyatri.in -udbmaster -prailyatri_prodb@123 railyatri_production
+
+#50 15 * * * /home/ubuntu/tblmenu.sh >>/tmp/tbl.log
+
+02 01 * * * mysqldump -h daxmark.railyatri.in -udbmaster -prailyatri_prodb@123 railyatri_production vendor_agreements | mysql -h yatrachef.railyatri.in -udbmaster -prailyatriasdfghjkl YC_DB
+
+58 06 * * * mysql -h daxmark.railyatri.in -u dbmaster -prailyatri_prodb@123 railyatri_production -e "insert into user_activities_archieves (select * from user_activities where journey_end_date=current_date()-3 and user_activity_type_id=1);"
+
+45 04 * * * mysql -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123 railyatri_production_large_tables -e "ALTER TABLE sa_search_results ADD COLUMN booking_rate DECIMAL(12,5) NULL AFTER secondary_data_result, ADD COLUMN cp_tickets INT(11) NULL AFTER booking_rate, ADD COLUMN urgency_text VARCHAR(255) NULL AFTER cp_tickets;"
+
+#00 03 * * * mysql -h daxmark.railyatri.in -u dbmaster -prailyatri_prodb@123 railyatri_production -e "alter table pnr_numbers add column ticket_type varchar(255);"
+#40 15 * * * mysqldump -h daxmark.railyatri.in -udbmaster -prailyatri_prodb@123 railyatri_production user_location_logs_05022017 user_location_logs_12022017 user_location_logs_26022017 | mysql -h ryanalysis.cfvtq1zzsc6l.ap-southeast-1.rds.amazonaws.com -udbmaster -prailyatriasdfghjkl railyatri_production
+
+#00 03 * * * mysqldump -h rylarge.railyatri.in -udbmaster -prailyatriasdfghjkl railyatri_production_large_tables sa_search_results_all | mysql -h ryanalysis.cfvtq1zzsc6l.ap-southeast-1.rds.amazonaws.com -udbmaster -prailyatriasdfghjkl railyatri_production_large_tables
+
+
+05 00 * * * mysqldump -h ryanalysis.railyatri.in -udatateam -pdatateam@321 ry_data_science_team top_20_ry_eta_predictions | mysql -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123 railyatri_production_large_tables
+
+30 00 * * * mysqldump -h ryanalysis.railyatri.in -udatateam -pdatateam@321 ry_data_science_team best_pnr_predictions | mysql -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123 railyatri_production_large_tables
+
+00 22 7 * * mysqldump -h ryanalysis.railyatri.in -udatateam -pdatateam@321 ry_data_science_team top_5_route_delays | mysql -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123 railyatri_production_large_tables
+
+#54 22 * * * nohup mysqldump -h 35.200.146.199 -udbmaster -prailyatri_prodb@123 railyatri_production_large_tables user_ip_details_10042019 | /bin/gzip > /logs/user_ip_details_10042019.sql.gz
+
+#57 16 * * *  mysqldump -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production_large_tables sa_search_results_old | mysql -h ryanalysis.railyatri.in -udbmaster -prailyatriasdfghjkl railyatri_production_large_tables
+
+#00 01 * * * mysqldump -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production_large_tables eta_logs_all_01032019 | /bin/gzip > /logs/eta_logs_all_01032019.sql.gz
+
+#55 13 * * * nohup mysqldump -h 52.172.189.38 -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production ty_bus_trips_all_02062019 | /bin/gzip > /logs/ty_bus_trips_all_02062019.sql.gz
+
+10 23 */5 * * mysqldump -h daxmark.railyatri.in -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production train_numbers train_routes train_route_points | mysql -h yatrastage.railyatri.in -udbmaster -prailyatri@qwerty@123 railyatri_production
+
+40 08 * * * nohup mysqldump -h 52.172.214.210 -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production_large_tables user_ad_trackings_11062019 | /bin/gzip > /logs/user_ad_trackings_11062019.sql.gz
+
+#57 15 * * * nohup mysqldump -h 52.172.189.38 -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production user_location_logs_26052019 | /bin/gzip > /logs/user_location_logs_26052019.sql.gz
+
+#40 12 * * * nohup mysqldump -h 52.172.189.38 -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production bus_service_responses_all_01062019 | /bin/gzip > /logs/bus_service_responses_all_01062019.sql.gz
+
+#00 01 * * * nohup mysqldump -h 52.172.214.54 -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production live_train_updates_03062019 | /bin/gzip > /logs/live_train_updates_03062019.sql.gz
+
+#55 17 * * * nohup mysqldump -h 52.172.214.54 -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production user_location_logs_03032019 | /bin/gzip > /logs/user_location_logs_03032019.sql.gz
+
+#05 19 * * * nohup mysqldump -h 52.172.214.54 -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production user_location_logs_10032019 | /bin/gzip > /logs/user_location_logs_10032019.sql.gz
+
+#22 01 * * * nohup mysqldump -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production_large_tables eta_logs_all_10042019 | /bin/gzip > /logs/eta_logs_all_10042019.sql.gz
+
+#18 21 * * * mysqldump -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production_large_tables sa_search_results | mysql -h 35.200.146.199 -udbmaster -prailyatri_prodb@123 railyatri_production_large_tables
+
+#31 12 * * * mysqldump -h ryanalysis.railyatri.in -udbmaster -prailyatriasdfghjkl --single-transaction --quick railyatri_production_large_tables eta_logs_all_06092018 | mysql -h 35.244.8.200 -udbmaster -prailyatriasdfghjkl railyatri_production_large_tables 
+
+
+#05 01 * * * mysqldump -h 52.172.189.38 -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production user_wallets | mysql -h 35.200.205.241 -udbmaster -prailyatriasdfghjkl railyatri_production
+
+#03 00 * * * mysqldump -h rylarge.railyatri.in -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production_large_tables train_ticket_booking_histories --where="date(created_at) < '2018-10-31' " | /bin/gzip > /logs/train_ticket_booking_histories.sql.gz
+
+*/20 * * * * /home/ubuntu/RY_scaleset/azure-ss.sh
+
+#####START VMs AT 06:00 AM#######
+
+00 06 * * * /bin/bash /home/ubuntu/vmstart.sh > /tmp/vm-start-status.txt
+
+#08 23 * * * /bin/bash /home/ubuntu/vmstart.sh > /tmp/vm-start-status.txt
+
+#======== Dump ryanalysis ry_data_science_team food_target_train_users to yatrachef YC_DB ==========#
+
+00 11 * * * mysqldump -h ryanalysis.railyatri.in -udatateam -pdatateam@321 ry_data_science_team food_target_train_users | mysql -h yatrachef.railyatri.in -udbmaster -prailyatriasdfghjkl YC_DB
+
+### Admin Wisdom Log Scripts ###
+
+00 01 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files admin-wisdom-new:/logs/admin-wisdom/* /logs/admin-wisdom-new/admin-wisdom/ > /tmp/admin-wisdom.log 2>&1'
+
+30 01 * * * /bin/bash -l -c 'rsync -avrth --remove-source-files admin-wisdom-new:/logs/nginx/* /logs/admin-wisdom-new/nginx/ > /tmp/admin-wisdom-nginx.log 2>&1'
+
+

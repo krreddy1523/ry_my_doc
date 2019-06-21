@@ -1,0 +1,19 @@
+how to revert deployment 
+
+ First you shoud go to server and enter the path (/u/apps/live_status/current)
+
+ now 
+
+ you can remove current (sudo rm -rf current)
+
+ now 
+
+ tag to past release in to current (ln -s /u/apps/live_status/releases/20190528072742(old release) current)
+
+ now go to current (touch tmp/restart.txt)
+
+ revert is done 
+
+ 
+
+ 

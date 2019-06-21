@@ -1,0 +1,138 @@
+pipeline{
+    agent any
+    stages{
+      
+     stage('removing vm for lb'){
+         
+         steps{
+             sh '''
+              
+             ssh deployer-azure ' az network nic ip-config address-pool remove --resource-group loadbalancer --nic-name loadtes2440  --ip-config-name ipconfig1   --lb-name load --address-pool loadbackend '
+            
+      '''        
+         }
+         
+     }
+
+     stage('copying files'){
+         
+         steps{
+             sh '''
+              
+              #!/bin/bash
+              
+              ssh deployer-azure ' scp /home/ubuntu/config/*.yml scaleset_ls_3:/u/apps/live_status/shared/config '
+            
+      '''        
+         }
+         
+     }
+     
+    stage (' Process to depolying '){
+        
+             steps {
+                 
+                 sh '''
+         
+                  ssh scaleset_ls_4 ' sh path of shell '
+                  
+                 # ssh scaleset_ls_4 ' cd /u/apps/live_status/current  && cap production_1 deploy '
+                  
+                  '''
+                 
+             }
+        
+    }
+    
+     stage (check with curl){
+         
+         steps {
+             
+             sh """
+             
+        #     ssh deployer-azure ' cd /u/apps/railyatri.live_status_5 && cap production_ss3 deploy'
+                  
+                  ssh scaleset_ls_4 ' curl localhost/api/home.json?[1-10] '
+                  
+                  """
+         }
+         
+     }
+
+
+    stage ( Add vm for lb ){
+         
+         steps {
+             
+             sh """
+             
+         ssh deployer-azure ' az network nic ip-config address-pool add  --resource-group loadbalancer  --nic-name loadtes2440 --ip-config-name ipconfig1 --lb-name load --address-pool loadbackend ' 
+                  
+                  """
+         }
+         
+     }
+
+   stage ( passenger-status ){
+         
+         steps {
+             
+             sh """
+             
+              ssh scaleset_ls_4 ' sudo passenger-status | grep max -A 5 '
+        
+                  
+                  """
+         }
+         
+     }
+     
+     stage ('send to mail') {
+         
+         steps{
+             
+             emailext body: 'live status deploy', subject: 'build is success', to: 'rajasekhar.reddy@railyatri.in'
+             
+         }
+         
+     }
+     
+        
+    }
+    
+}
+
+
+
+
+!#/bin/bash
+
+statusB=0
+statusA=$(echo "failed")
+statusB=$(sudo service mongod status| grep Active | awk '{print $2}')
+
+if ($statusA=$statusB) then
+
+sudo service mongod start
+
+fi
+
+
+#!/bin/bash
+
+echo "####### Created By Uday #######"
+for i in {1..10}
+do
+echo ">>>>>>>>>> OUTPUT $i <<<<<<<<<<"
+sudo passenger-status | grep max -A 5
+
+echo "*******************************"
+sleep 1;
+done
+
+statusB=$(sudo  passenger-status| grep active | awk '{print $3}')
+
+
+
+railyatriqwerty@123
+railyatri@qwerty123 railyatri wifi

@@ -1,0 +1,74 @@
+add vm for azure loadbalancer
+
+az network nic ip-config address-pool add  --resource-group loadbalancer  --nic-name load3546  --ip-config-name ipconfig1 --lb-name load --address-pool loadbackend
+
+remove vm for loadbalancer
+
+az network nic ip-config address-pool remove --resource-group loadbalancer --nic-name loadtest7VMNic --ip-config-name loadtest7PublicIP   --lb-name load --address-pool loadbackend
+
+
+az network nic ip-config address-pool add  --resource-group loadbalancer  --nic-name loadtest3338  --ip-config-name ipconfig1 --lb-name load --address-pool loadbackend
+
+To create vm 
+
+az vm create -n demo2 -g loadbalancer --size Standard_B1ls --image /subscriptions/f936f200-78a9-4f25-ae9e-9632a1a5670c/resourceGroups/Production/providers/Microsoft.Compute/images/ssls-image-2019235 --vnet-name  loadbalancer-vnet --subnet default --nsg "" --availability-set loadtest --generate-ssh-keys
+
+
+az vm create -n loadtest4 -g scaleset --image /subscriptions/f936f200-78a9-4f25-ae9e-9632a1a5670c/resourceGroups/Production/providers/Microsoft.Compute/images/ssls-image-2019235 --vnet-name 
+loadbalancer-vnet --subnet default --availability-set loadtest --ssh-key-value @key-file
+
+
+az vm create -n demo1 -g loadbalancer --size Standard_B1ls --image /subscriptions/f936f200-78a9-4f25-ae9e-9632a1a5670c/resourceGroups/Production/providers/Microsoft.Compute/images/ssls-image-2019235 --vnet-name livestatus_scaleset --subnet default --generate-ssh-keys
+
+az vm create -n demo1 -g loadbalancer --size Standard_B1ls --image /subscriptions/f936f200-78a9-4f25-ae9e-9632a1a5670c/resourceGroups/Production/providers/Microsoft.Compute/images/ssls-image-2019235 --vnet-name  loadbalancer-vnet --subnet default --nsg "stageNSG" --availability-set loadtest --generate-ssh-keys
+
+Check the deatails of vm
+
+az vm nic show -g loadbalancer --vm-name loadtest3 --nic loadtest3338
+
+To check the nic for vm
+
+az vm nic list -g Production --vm-name live-new-3 | grep "id" | awk {' print $2'} | tr '/' '\n' | tail -n1
+
+az vm nic list -g Production --vm-name live-new-3 | grep "id" | awk {' print $2'} | tr '/' '\n' | tr ',' ' ' | tr '"' ' ' | tail -n1
+
+To check IP configaration
+
+az network nic ip-config list --nic-name live-new-3849", --resource-group Production --out table | awk 'NR==3 {print $1}'
+
+
+
+
+az network nic ip-config list --nic-name loadtest3338 --resource-group loadbalancer --out table
+
+
+az network lb show -g loadbalancer -n load
+
+az lab vm delete --lab-name $labName --name $vmName --resource-group $resourceGroupName
+
+Vupo7287
+
+
+LINKS
+
+VM
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-cli?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json
+https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest#az-vm-create
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-availability-sets
+https://cloud.githubusercontent.com/assets/1471612/8807151/7b7fddfe-2f8f-11e5-8775-fc815d673cdf.png
+
+NIC
+https://docs.microsoft.com/en-us/cli/azure/vm/nic?view=azure-cli-latest#az-vm-nic-show
+
+
+
+az vm create \
+     --resource-group myResourceGroupAvailability \
+     --name myVM$i \
+     --availability-set myAvailabilitySet \
+     --size Standard_DS1_v2  \
+     --vnet-name myVnet \
+     --subnet mySubnet \
+     --image UbuntuLTS \
+     --admin-username azureuser \
+     --generate-ssh-keys

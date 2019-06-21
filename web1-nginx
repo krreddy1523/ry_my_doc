@@ -1,0 +1,236 @@
+
+
+ssh api-test sudo rm -rf /u/apps/railyatri_mobile_api_2/current/public/test.txt && sleep 10 && scp /home/ubuntu/config/*.yml api-test:/u/apps/railyatri_mobile_api_2/shared/config/ && cd /u/apps/railyatri.mobile_api_server && eval $(ssh-agent) && ssh-add && cap api_test deploy && scp -r /home/ubuntu/test.txt api-test:/u/apps/railyatri_mobile_api_2/current/public/ && ssh api-test cat /u/apps/railyatri_mobile_api_2/current/public/test.txt && curl 104.211.92.72/api/home.json?[1-10]
+
+
+passenger_max_pool_size 30;
+passenger_min_instances 8;
+server
+{
+	server_name 104.211.100.118;
+	listen 80;
+	return 301 http://www.railyatri.in$request_uri;
+	location ~* \.(?:css|gif|jpe?g|png|ico|js|swf)$
+	{
+		expires max;
+	}
+	location ~* (\.php) {
+        return 404;
+}
+
+location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+    expires 30d;
+    add_header Cache-Control "public, no-transform";
+}
+
+}
+
+server
+{
+	server_name railyatri.in;
+	listen 80;
+	return 301 http://www.railyatri.in$request_uri;
+	location ~* \.(ico|jpg|gif|png|css|js|swf|html)$
+	{
+		if (-f $request_filename)
+		{
+			expires max;
+			break;
+		}
+	}
+	location ~* (\.php) {
+        return 404;
+}
+
+location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+    expires 30d;
+    add_header Cache-Control "public, no-transform";
+
+}
+
+ location = /akam-sw-policy.json {
+        deny all;
+}
+
+location =  /akam-sw.js {
+        deny all;
+}
+
+
+}
+
+server {
+  listen 80;
+  server_name  smartbus.railyatri.in;
+  location / {
+    return 302 https://www.railyatri.in/m/bus-booking;
+
+
+#  }
+#}
+
+server
+{
+        server_name railyatri.in;
+        listen 443;
+        ssl on;
+        ssl_certificate /opt/nginx/ssl/railyatri.in.chained.crt;
+        ssl_certificate_key /opt/nginx/ssl/railyatri.key;
+        return 301 https://www.railyatri.in$request_uri;
+        location ~* \.(ico|jpg|gif|png|css|js|swf|html)$
+        {
+                if (-f $request_filename)
+                {
+                        expires max;
+                        break;
+                }
+        }
+	location ~* (\.php) {
+        return 404;
+}
+
+location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+    expires 30d;
+    add_header Cache-Control "public, no-transform";
+}
+}
+
+server {
+  listen 443 ssl;
+  server_name  smartbus.railyatri.in;
+  location / {
+    return 302 https://www.railyatri.in/m/bus-booking;
+
+
+#  }
+#}
+
+
+server
+{
+	listen 80;
+	server_name mobile.railyatri.in railradar.railyatri.in m.railyatri.in smartbus.railyatri.in;
+	access_log /u/apps/railyatri_web/shared/log/access.log main;
+	root /u/apps/railyatri_web/current/public;
+	passenger_enabled on;
+	rewrite ^(/img/)(thumbnails/.*) https://images.railyatri.in/wisdoms/$2 permanent;
+	rewrite ^(/img/)(.*) https://images.railyatri.in/wisdoms/original/$2 permanent;
+ #      rewrite ^https://smartbus.railyatri.in/(.*)$ https://www.railyatri.in/$1 permanent;
+#	limit_req zone=one burst=20 ;
+        location /api/train-ticket
+	{
+		if ($request_method = POST)
+		{
+			proxy_pass https://agents.railyatri.in;
+			break;
+		}
+		rewrite ^(/api/train-ticket/.*) https://agents.railyatri.in/$1 permanent;
+	}
+	location ~* \.(ico|jpg|gif|png|css|js|swf|html)$
+	{
+		if (-f $request_filename)
+		{
+			expires max;
+			break;
+		}
+	}
+	location ~ /\.ht
+	{
+		deny all;
+	}
+	error_page 503 /502.html;
+	location = /502.html
+	{
+
+		root /u/apps;
+
+	}
+	location ~* \.(php) {
+        return 404;
+}
+
+location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+    expires 30d;
+    add_header Cache-Control "public, no-transform";
+}
+
+ location = /akam-sw-policy.json {
+        deny all;
+}
+
+location =  /akam-sw.js {
+        deny all;
+}
+
+
+}
+
+server
+{
+	listen 443;
+	ssl on;
+	server_name www.railyatri.in railradar.railyatri.in m.railyatri.in mobile.railyatri.in smartbus.railyatri.in;
+	access_log /u/apps/railyatri_web/shared/log/access.log main;
+	root /u/apps/railyatri_web/current/public;
+	passenger_enabled on;
+	ssl_certificate /opt/nginx/ssl/railyatri.in.chained.crt;
+	ssl_certificate_key /opt/nginx/ssl/railyatri.key;
+	rewrite ^(/img/)(thumbnails/.*) https://images.railyatri.in/wisdoms/$2 permanent;
+	rewrite ^(/img/)(.*) https://images.railyatri.in/wisdoms/original/$2 permanent;
+        if ($host = smartbus.railyatri.in)
+          {
+        rewrite ^/(.+)$ https://www.railyatri.in/$1 permanent;
+         }
+#	limit_req zone=one burst=20 ;
+        location /api/train-ticket
+	{
+		if ($request_method = POST)
+		{
+			proxy_pass https://agents.railyatri.in;
+			break;
+		}
+		rewrite ^(/api/train-ticket/.*) https://agents.railyatri.in/$1 permanent;
+	}
+	location ~* \.(ico|jpg|gif|png|css|js|swf|html)$
+	{
+		if (-f $request_filename)
+		{
+			expires max;
+			break;
+		}
+	}
+	location ~ /\.ht
+	{
+		deny all;
+	}
+	error_page 503 /502.html;
+	location = /502.html
+	{
+
+		root /u/apps;
+
+	}
+        location ~* \.(php) {
+        return 404;
+
+}
+
+location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+    expires 30d;
+    add_header Cache-Control "public, no-transform";
+}
+
+ location = /akam-sw-policy.json {
+        deny all;
+}
+
+location =  /akam-sw.js {
+        deny all;
+}
+
+
+}
+
+
+
+

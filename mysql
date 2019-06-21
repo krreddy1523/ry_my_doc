@@ -1,0 +1,63 @@
+mysql
+
+mysql -h daxmark.railyatri.in -u readonly  -p -A (user) (read only )
+
+mysql -h daxmark.railyatri.in -u railstager  -p -A (user) (limted access like read)
+omlLoG (passwd)
+
+
+select * from information_schema.processlist where command != 'Sleep' and time > 0;
+
+check the querys for venki
+
+select * from information_schema.processlist where command != 'Sleep' and time > 0 and user='venki';
+
+
+ssh DB-Prod (Data base)
+
+mysql -h daxmark.railyatri.in -u dbmaster -prailyatri_prodb@123 railyatri_production -A (admin)
+
+select count(*) from table_name; (Check table count)
+
+....................To check the table index.............................
+
+show tables;
+
+show index from table-name 
+
+show index from ry_bus_users \G;
+
+.....................Kill the process..............................
+
+ select * from information_schema.processlist where Command!='Sleep' and Time  >0 and user='marvels';
+
+ kill user marvels;
+
+ kill id
+
+ SELECT CONCAT('KILL ',id,';') AS run_this FROM information_schema.processlist WHERE user='marvels' AND info = 'SELECT * FROM processlist';
+
+
+
+
+show database;
+show tables;
+show index from tablename;
+
+.................................................************SQL REPLICATION**************.........................................
+
+ssh prodb-replica
+
+ mysql -h 52.172.189.38 -u dbmaster -prailyatri_prodb@123 railyatri_production -A (DB Admin login)
+
+ select * from information_schema.processlist where command != 'Sleep' and time > 0; (check all )
+
+ select * from train_ticket_bookings limit 1; (to run the qury for seepd test only)
+
+
+UPDATE `railyatri_production`.`food_images` SET `image_url`='https://images.railyatri.in/ry_images_prod/food-banner-new-1-1-1558689675.png ' WHERE `id`='11';
+
+SELECT table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024 / 1024), 2) `Size` FROM information_schema.TABLES WHERE table_schema = "railyatri_production";
+
+
+
