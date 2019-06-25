@@ -1,0 +1,43 @@
+# first make folder in /logs, then change owner of logs as wll as utils folder
+devname="/dev/xvda1"
+usep=`df -k $devname | grep -v ^File | awk '{printf ("%i",$5); }'`
+#if [ $usep -gt 80 ]
+# then
+#    echo "Running out of space (greater than 80) \"$devname ($usep%)\" on $(hostname) as on $(date)"
+          sudo echo $(date) >> /u/apps/utils/freeDiskSpace.log
+          sudo echo "deleting log from opt/nginx/logs" >> /u/apps/utils/freeDiskSpace.log
+
+          sudo tar -czvf /logs/nginx/`date +"error_%Y_%m_%d_%H_%M.log.tgz"` /opt/nginx/logs/error.log
+          sudo tar -czvf /logs/nginx/`date +"access_%Y_%m_%d_%H_%M.log.tgz"` /opt/nginx/logs/access.log
+
+          sudo chown ubuntu:ubuntu /opt/nginx/logs/error.log
+          sudo cat /dev/null > /opt/nginx/logs/error.log
+          sudo chown root:root /opt/nginx/logs/error.log
+
+          sudo chown ubuntu:ubuntu /opt/nginx/logs/access.log
+          sudo cat /dev/null > /opt/nginx/logs/access.log
+          sudo chown root:root /opt/nginx/logs/access.log
+#  fi
+
+#if [ $usep -gt 80 ]
+# then
+#    echo "Running out of space \"$devname ($usep%)\" on $(hostname) as on $(date)"
+      if [ -d "/u/apps/pnr_server_1" ]
+      then
+          sudo echo $(date) >> /u/apps/utils/freeDiskSpace.log
+          sudo echo "deleting log from pnr_server_1" >> /u/apps/utils/freeDiskSpace.log
+
+         sudo tar -czvf /logs/pnr_server_1/`date +"access_%Y_%m_%d_%H_%M.log.tgz"` /u/apps/pnr_server_1/current/log/access.log
+         sudo tar -czvf /logs/pnr_server_1/`date +"production_%Y_%m_%d_%H_%M.log.tgz"` /u/apps/pnr_server_1/current/log/production.log
+
+         sudo chown ubuntu:ubuntu /u/apps/pnr_server_1/current/log/access.log
+         sudo cat /dev/null > /u/apps/pnr_server_1/current/log/access.log
+         sudo chown root:root /u/apps/pnr_server_1/current/log/access.log
+
+         sudo chmod 755 /u/apps/pnr_server_1/current/log/production.log
+         sudo cat /dev/null > /u/apps/pnr_server_1/current/log/production.log
+      fi
+#  else
+#      sudo echo $(date) >> /u/apps/utils/freeDiskSpace.log
+#      sudo echo "No deletion done since HDD usage is less than 80%" >> /u/apps/utils/freeDiskSpace.log
+#  fi

@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout changelog: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://git.assembla.com/railyatri.railyatri_web.git']]]
+                lastChanges since: 'LAST_SUCCESSFUL_BUILD', format:'SIDE',matching: 'LINE'
+            }
+        }
+        
+        stage ('Deploy') {
+            
+            steps {
+                sh """
+                
+                ssh scaleset_ls_4 'sh /home/ubuntu/script/passenger.sh'
+                
+                """
+            }
+            
+        }
+    }
+}
