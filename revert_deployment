@@ -6,14 +6,32 @@ how to revert deployment
 
  you can remove current (sudo rm -rf current)
 
- now 
+ now (take old release and put)
 
- tag to past release in to current (ln -s /u/apps/live_status/releases/20190528072742(old release) current)
+ tag to past release in to current (ln -s /u/apps/railyatri_web/releases/20190620105954(old one) current)
 
- now go to current (touch tmp/restart.txt)
+   ln -s /u/apps/railyatri_web/releases/20190620105954 current 
+
+ now go to current (touch /tmp/restart.txt)
 
  revert is done 
 
+
  
+ 
+
+ /u/apps/live_status/current
+
+ sudo rm -rf current
+ 
+ cd /u/apps/railyatri_web/releases/
+
+  ll
+
+ ln -s /u/apps/railyatri_web/releases/20190620105954 current 
+
+ touch /tmp/restart.txt 
+
+
 
  

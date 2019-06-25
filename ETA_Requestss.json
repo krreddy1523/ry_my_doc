@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "82ea44e7-0398-4fbe-9b92-c4c35f3a84e0",
+		"name": "ETA Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Java-New-2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "25a10a45-6431-4eaa-a8c0-790063c5aac6",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response received!\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"AlertId\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "ApiKey",
+						"type": "text",
+						"value": "9ab1a68e5092e42788b3926a81d7817c31c7cece"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Eta\":{ \"TrainNumber\" : \"12296\",\"TrainStartDate\": \"2019-06-19\" }}"
+				},
+				"url": {
+					"raw": "http://one.two.three.four:/etas/predict",
+                                	"protocol": "http",
+					"host": [
+						"one",
+						"two",
+						"three",
+						"four"
+					],
+					"port": "4030",
+					"path": [
+						"etas",
+						"predict"
+					]
+				}
+			},
+			"response": []
+           }
+	]
+}

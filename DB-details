@@ -1,3 +1,5 @@
+
+
 mysqldump -h daxmark.railyatri.in -udbmaster -prailyatri_prodb@123 --single-transaction --quick railyatri_production common_surveys | mysql -h yatrastage.railyatri.in -udbmaster -prailyatri@qwerty@123 railyatri_production
 
 
