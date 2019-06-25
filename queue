@@ -1,0 +1,12 @@
+                                                                       
+                                                                                                     Queue
+
+ web application - first we shoud check newrelic and find the error
+
+  if it's not resolve
+
+  sudo killall nginx
+
+  sudo /etc/init.d/nginx start
+
+ 

@@ -1,0 +1,612 @@
+@max := (SELECT MAX(id) FROM user_location_logs )
+320425028
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=320425029
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_27032016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+326944344
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=326944345
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_03042016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+333432564
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=333432565
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_10042016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+340085956
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=340085957
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_17042016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+342802507
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=342802508
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_20042016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+342804043
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=342804044
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_20042016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+346729527
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=346729528
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_24042016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+352812207
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=352812208
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_01052016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+359186306
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=359186307
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_08052016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+366806725
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=366806726
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_15052016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+374816044
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=374816045
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_22052016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+384044688
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=384044689
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_29052016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+393688934
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=393688935
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_05062016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+403216770
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=403216771
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_12062016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+411629275
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=411629276
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_19062016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+419765090
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=419765091
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_26062016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+427997274
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=427997275
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_03072016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+440262072
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=440262073
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_10072016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+455912184
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=455912185
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_17072016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+474195682
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=474195683
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_24072016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+492381450
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=492381451
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_31072016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+513028188
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=513028189
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_07082016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+538823229
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=538823230
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_14082016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+560053515
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=560053516
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_21082016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+580045103
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=580045104
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_28082016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+599070190
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=599070191
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_04092016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+619898152
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=619898153
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_11092016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+639548469
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=639548470
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_18092016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+659996418
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=659996419
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_25092016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+683960121
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=683960122
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_02102016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+711366136
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=711366137
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_09102016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+738817360
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=738817361
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_16102016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+765624941
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=765624942
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_23102016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+793702092
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=793702093
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_30102016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+818236490
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=818236491
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_06112016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+844258041
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=844258042
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_13112016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+868147195
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=868147196
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_20112016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+891104123
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=891104124
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_27112016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+916499313
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=916499314
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_04122016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+943889463
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=943889464
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_11122016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+971636314
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=971636315
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_18122016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+998066727
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=998066728
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_25122016`
+@max := (SELECT MAX(id) FROM user_location_logs )
+1026534962
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1026534963
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_01012017`
+@max := (SELECT MAX(id) FROM user_location_logs )
+1055217207
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1055217208
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_08012017`
+@max := (SELECT MAX(id) FROM user_location_logs )
+1084785584
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1084785585
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_15012017`
+@max := (SELECT MAX(id) FROM user_location_logs )
+1091953980
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1091953981
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_17012017`
+@max := (SELECT MAX(id) FROM user_location_logs )
+1091956375
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1091956376
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_17012017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1115769157
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1115769158
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_22012017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1146051230
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1146051231
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_29012017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1177249869
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1177249870
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_05022017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1209016204
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1209016205
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_12022017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1238137079
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1238137080
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_19022017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1275351149
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1275351150
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_26022017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1321819191
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1321819192
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_05032017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1373493894
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1373493895
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_12032017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1418530575
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1418530576
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_19032017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1466092923
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1466092924
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_26032017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1518206048
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1518206049
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_02042017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1576070090
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1576070091
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_09042017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1633509577
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1633509578
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_16042017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1694223059
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1694223060
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_23042017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1749365086
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1749365087
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_30042017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1809480313
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1809480314
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_07052017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1862201954
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1862201955
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_14052017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs
+@max := (SELECT MAX(id) FROM user_location_logs )
+1920939886
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_location_logs_new AUTO_INCREMENT=1920939887
+@query1 := CONCAT('CREATE TABLE ', 'user_location_logs_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_location_logs_new LIKE user_location_logs
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_location_logs TO `user_location_logs_21052017`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_location_logs_new TO user_location_logs

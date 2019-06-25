@@ -1,0 +1,66 @@
+@max := (SELECT MAX(id) FROM user_ip_details )
+104135462
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_ip_details_new AUTO_INCREMENT=104135463
+@query1 := CONCAT('CREATE TABLE ', 'user_ip_details_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_ip_details_new LIKE user_ip_details
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_ip_details TO `user_ip_details_31032016`
+@max := (SELECT MAX(id) FROM user_ip_details )
+104135462
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+ALTER TABLE user_ip_details_new AUTO_INCREMENT=104135463
+@query1 := CONCAT('CREATE TABLE ', 'user_ip_details_new', ' LIKE ', @tablename,'')
+CREATE TABLE user_ip_details_new LIKE user_ip_details
+@query := CONCAT('RENAME TABLE ', @tablename, ' TO `', @tablename, '_', DATE_FORMAT(NOW(), '%d%m%Y'),'`')
+RENAME TABLE user_ip_details TO `user_ip_details_30042016`
+@query2 := CONCAT('RENAME TABLE ', @tablename1, ' TO ', @tablename,'')
+RENAME TABLE user_ip_details_new TO user_ip_details
+@max := (SELECT MAX(id) FROM user_ip_details )
+NULL
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+NULL
+@max := (SELECT MAX(id) FROM user_ip_details )
+NULL
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+NULL
+@max := (SELECT MAX(id) FROM user_ip_details )
+NULL
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+NULL
+@max := (SELECT MAX(id) FROM user_ip_details )
+NULL
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+NULL
+@max := (SELECT MAX(id) FROM user_ip_details )
+NULL
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+NULL
+@max := (SELECT MAX(id) FROM user_ip_details )
+NULL
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+NULL
+@max := (SELECT MAX(id) FROM user_ip_details )
+NULL
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+NULL
+@max := (SELECT MAX(id) FROM user_ip_details )
+NULL
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+NULL
+@max := (SELECT MAX(id) FROM user_ip_details )
+NULL
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+NULL
+@max := (SELECT MAX(id) FROM user_ip_details )
+NULL
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+NULL
+@max := (SELECT MAX(id) FROM user_ip_details )
+NULL
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+NULL
+@max := (SELECT MAX(id) FROM user_ip_details )
+NULL
+@query4 := CONCAT('ALTER TABLE ',  @tablename1, ' AUTO_INCREMENT', '=', @max+1,'')
+NULL
