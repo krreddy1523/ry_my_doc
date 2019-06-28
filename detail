@@ -1,0 +1,7 @@
+Host deployer-azure
+HostName 52.172.199.207
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/rajasekharreddy/.ssh/azure.pem
+`:x!
+
