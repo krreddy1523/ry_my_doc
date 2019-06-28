@@ -1,0 +1,127 @@
+pipeline{
+    agent any
+    stages{
+        
+        stage (' Removing .txt '){
+            
+            steps{
+                
+                sh '''
+                
+                 ssh  scaleset_ls_4 sudo rm -rf /u/apps/railyatri_mobile_api_2/current/public/test.txt && sleep 50
+                 
+                 '''
+                
+            }
+        }
+        
+        stage (' copying files ') {
+            
+            steps{
+                
+                sh '''
+                
+                ssh deployer-azure ' scp /home/ubuntu/config/*.yml scaleset_ls_4:/u/apps/railyatri_mobile_api_2/shared/config/ '
+                
+                '''
+            }
+            
+        }
+ 
+    stage (' Process to depolying '){
+        
+             steps {
+                 
+                 sh '''
+                 
+                  ssh deployer-azure ' cd /u/apps/railyatri.mobile_api_server && eval $(ssh-agent) && ssh-add && source ~/.rvm/scripts/rvm && cd /u/apps/railyatri.mobile_api_server && cap api_test deploy '
+                  
+                #  ssh scaleset_ls_4 ' cd /u/apps/live_status/current  && cap production_1 deploy ' 
+                  
+                 #ssh scaleset_ls_4  ' sh /home/ubuntu/script/passenger.sh '
+                  
+                  
+                  '''
+                 
+             }
+        
+    }
+    
+      stage (' finding .txt ') {
+          
+           steps {
+               
+               sh '''
+               
+               ssh scaleset_ls_4 cat /u/apps/railyatri_mobile_api_2/current/public/test.txt
+               
+               '''
+               
+           }
+          
+      }
+    
+     stage (curl){
+         
+         steps {
+             
+             sh """
+             
+        #     ssh deployer-azure ' cd /u/apps/railyatri.live_status_5 && cap production_ss3 deploy'
+                  
+                  ssh deployer-azure ' curl 104.211.92.72/test.txt?[1-3] && curl 104.211.92.72/api/home.json?[1-10] '
+                  
+                  """
+         }
+         
+     }
+     
+      
+      stage (' passenger status '){
+          
+          steps {
+              
+              sh '''
+              
+              ssh scaleset_ls_4 ' sudo passenger-status '
+              
+              '''
+              
+          }
+          
+          
+      }
+      
+       stage('Checkout') {
+            steps {
+                checkout changelog: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'https://git.assembla.com/railyatri.mobile_api.git']]]
+                lastChanges since: 'LAST_SUCCESSFUL_BUILD', format:'SIDE',matching: 'LINE'
+            }
+        }
+        
+        stage ('slack') {
+            steps{
+       slackSend channel: 'testjenkins', message: 'build is success', tokenCredentialId: 'jenkins-notification'
+   }
+        }
+        
+    }
+     
+       post {
+    failure {
+        mail to: 'rajasekhar.reddy@railyatri.in',
+             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Something is wrong with ${env.BUILD_URL}"
+    }
+    
+    success {
+        mail to: 'rajasekhar.reddy@railyatri.in, uday.pandey@railyatri.in',
+             subject: "success Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Something is wrong with ${env.BUILD_URL}"
+    }
+    
+        
+    }
+    
+}
+
