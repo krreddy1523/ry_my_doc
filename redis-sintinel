@@ -1,0 +1,119 @@
+
+https://medium.com/@amila922/redis-sentinel-high-availability-everything-you-need-to-know-from-dev-to-prod-complete-guide-deb198e70ea6
+
+https://redis.io/topics/sentinel
+
+http://download.redis.io/redis-stable/sentinel.conf
+
+https://redis.io/topics/rediscli (imp)
+
+**** https://github.com/opstree/redis-migration (we can fallow dump file restore one file to another one)
+https://blog.opstree.com/search?q=redis
+https://github.com/opstree/redis-migration
+https://georgechilumbu.wordpress.com/2016/12/19/redis-sentinel-installation/
+
+
+
+
+                                                                                           redis sentinel
+
+sudo apt-get update 
+
+sudo apt-get install build-essential tcl
+
+sudo apt-get install libjemalloc-dev  (Optional)
+
+curl -O http://download.redis.io/redis-stable.tar.gz
+
+tar xzvf redis-stable.tar.gz
+
+cd redis-stable
+
+make
+
+make test
+
+sudo make install
+
+vi redis.con
+   
+   path 1523
+   bind 0.0.0.0
+   logfile "path/redis-stable/redis.log"
+   slaveof ip 1523 (if slave for master not req)
+
+vi sentinel.con
+
+  bind 1523
+  logfile "path/redis-stable/sentienl.log"
+
+
+cd redis-stable/src/ && ./redis-server ../redis.conf &
+cd redis-stable/src/ && ./redis-server ../sentinel.conf --sentinel &
+
+.................................................................................................
+
+patn :-  /u/apps/railyatri_web_rails_5/current/config/initializers/redis.rb
+         /u/apps/railyatri_web_rails_5/current/config/redis.yml
+
+#$redis_config = YAML.load_file("#{Rails.root.to_s}/config/redis.yml")[Rails.env]
+#$redis = Redis.new(:host => $redis_config["host"], :port => $redis_config["port"])
+
+SENTINELS = [{ host: "34.68.118.158", port: 26379 },
+             { host: "35.239.202.13", port: 26379 }]
+
+$redis = Redis.new(host: "mymaster", sentinels: SENTINELS, role: :master)
+
+if defined?(PhusionPassenger)
+  PhusionPassenger.on_event(:starting_worker_process) do |forked|
+    # We're in smart spawning mode.
+    if forked
+      # Re-establish redis connection
+      require 'redis'
+      # The important two lines
+      $redis.client.disconnect
+#      $redis = Redis.new(:host => $redis_config["host"], :port => $redis_config["port"])
+      $redis = Redis.new(host: "mymaster", sentinels: SENTINELS, role: :master)
+
+    end
+  end
+end
+
+
+
+m    34.68.118.158 
+s1   146.148.111.130 
+s2   35.239.202.13 
+
+35.200.202.164 main stage
+
+
+.............................
+
+35.200.202.164 (redis stage)
+
+
+#!/bin/bash
+
+ redis-cli -h 0.0.0.0 -p 9393 ping
+
+ value= PONG
+
+ redis=`redis-cli -h 0.0.0.0 -p 9393 ping | awk '{print $1}'`
+
+ echo $redis
+
+ if [ $redis -ne $value ]
+
+ then
+
+ cd redis-stable/src/ && ./redis-server ../redis.conf &
+ cd redis-stable/src/ && ./redis-server ../sentinel.conf --sentinel &
+
+ echo " Redis working fine  "
+
+ else
+
+ echo "working fine"
+
+ fi

@@ -1,0 +1,45 @@
+                                  MY DB
+
+ssh mysql (deployer server)
+
+sudo mysql -u root -p
+
+railyatri
+
+show databases;
+
+use railyatri
+
+show tables;
+
+    Querys
+
+Alter (used to add, modify, delete or drop colums of a table.)
+
+ex:- ALTER TABLE customers ADD age varchar(50);
+
+Insert (insert query is used to insert records into table)
+
+ex:- insert into customers values(101,'rahul','delhi');
+
+Update (update query is used to update records of a table)
+
+ex:- update customers set name='bob', city='london' where id=101;  
+
+Delete (sed to delete records of a table from database)
+
+ex:- delete from customers where id=101; 
+
+Select (select query is used to fetch records from database.)
+
+ex:- SELECT * from customers;  
+
+Truncate Table (MySQL update query is used to truncate or remove records of a table. It doesn't remove structure)
+
+ex:- truncate table customers;  
+
+Drop (drop query is used to drop a table, view or database. It removes structure and data of a table if you drop table)
+
+ex:- drop table customers;  
+
+

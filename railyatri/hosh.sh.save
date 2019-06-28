@@ -1,0 +1,15 @@
+#!/bin/sh
+
+
+# .................. Find host name .......................
+
+ ip=`hostname -I | cut -d'=' -f2 | cut -d "'" -f2`
+
+ ip1=`hostname  | cut -d'=' -f2 | cut -d "'" -f2`
+ echo host $ip
+# echo $ip1
+ssh deployer "sed -i  '1i Host $ip'   /home/ubuntu/.ssh/config"
+#ssh ginger@192.168.0.31 "sed -i  '2i $ip1'   /home/ginger/jenkins1/malli
+#ssh ginger@192.168.0.31  "sed -i  '3i mallikarjuna'   /home/ginger/jenkins1/malli"
+
+#ssh ginger@192.168.0.31 "sed -i  '4i  i am devops engeineer'   /home/ginger/jenkins1/malli"

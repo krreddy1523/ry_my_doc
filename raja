@@ -1,6 +1,8 @@
 https://console.cloud.google.com
 
+du -sh *
 
+sudo cat /var/log/syslog | grep cron -i | grep "mail.sh" (crontab checker)
 
 sudo nano /opt/nginx/conf/sites-enabled/live_status
 

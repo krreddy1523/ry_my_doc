@@ -1,0 +1,898 @@
+#....................... SCALE SET..............................#
+
+Host  ryanalysis-replica
+HostName 35.244.8.200
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host google-prodreplica-2nd
+HostName 35.200.205.241
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+
+Host cc-railyatri
+HostName 52.172.133.1
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host php-quais
+HostName 35.200.212.156
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host zabbix
+#HostName 52.172.197.157
+HostName 35.200.221.215
+#User himanshu
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host qbns-prod
+HostName 13.71.3.169
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-qbns-points
+HostName 35.200.206.223
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host jira
+HostName 35.200.194.56
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host extranet-stage
+HostName 35.200.211.41
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host extranet-prod
+HostName 35.200.175.197
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host marketing-camp-3 
+HostName 104.211.76.108
+#HostName 104.211.103.142
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host marketing-camp-4 
+#HostName 104.211.76.108
+HostName 104.211.103.142
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host blog-test
+HostName 35.200.194.57
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host blog-stage
+HostName 35.200.203.204 
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host wp-new
+HostName 35.200.224.217
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+Host payment-prod-new
+HostName 104.211.94.153
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host jenkins
+HostName 35.200.161.240
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host yatra-cc-2
+HostName 104.211.95.58
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host elk-stack
+HostName 35.200.175.92
+User ubuntu
+ForwardAgent yes
+#IdentityFile /home/ubuntu/.ssh/stelling-key.pem
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host yatra-stage
+HostName 35.200.135.93
+User ubuntu
+ForwardAgent yes
+#IdentityFile /home/ubuntu/.ssh/stelling-key.pem
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host prateek-server
+HostName 35.166.231.40
+User ec2-user
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/kp-elastic-ip.pem
+
+Host rylarge-rep-google
+HostName 35.200.146.199
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host sidekiq-1-azure-5
+HostName 13.71.21.119
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+
+Host sidekiq-2-azure-5
+HostName 13.71.21.165
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host sidekiq-3-azure-5
+HostName 52.172.141.14
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host sidekiq-4-azure-5
+HostName 104.211.116.17
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-rake-qbns
+HostName 35.200.229.189
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host pnr-stage-new
+HostName 35.200.232.139
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host yatra-partner
+HostName 52.172.196.72
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host yatra-replica
+HostName 104.211.67.164
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host vendor_stage
+HostName 35.200.137.115
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host rylarge-replica
+HostName 104.211.66.237
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host rail-wisdom
+HostName 35.200.136.61
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host mongonew
+HostName 52.172.194.122
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host node-socket
+HostName 35.200.133.90
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host mongo-redis-google
+HostName 35.200.202.164 
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host ldap
+HostName 35.200.183.197
+User ubuntu
+#User devteam
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-qbns-prod
+#HostName 35.200.229.189
+HostName 35.200.206.171
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host blog-google
+HostName 35.200.242.251
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host qbns-stage
+#HostName 35.201.132.114
+HostName 35.200.142.20
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host web-stage
+HostName 35.198.240.230 
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host payment-stage-gc
+HostName 35.200.164.225
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host mer-gds-stage
+HostName 35.200.212.5
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host bus-api-server-3-ind
+HostName 52.172.194.224
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host DB-Prod
+#HostName 52.172.217.145 
+HostName 52.172.214.54
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host prodb-replica
+HostName 52.172.189.38
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host php-servermon
+HostName 35.240.135.96
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/stelling-india.pem_old
+
+Host yatrachef-stage
+HostName 172.31.5.30
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/prod-mumbai.pem
+
+Host yatrachef
+HostName 52.172.192.169
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+
+
+Host ry-analysis
+HostName 35.200.205.218
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host payment-rake
+HostName 52.172.190.57
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host java-1
+HostName 52.172.198.195
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/java.pem
+
+Host java-new-1
+HostName 52.172.152.55
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/java.pem
+
+Host java-2
+HostName 52.172.197.16
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/java.pem
+
+Host java-new-2
+HostName 52.172.192.60
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/java.pem
+
+Host java-3
+HostName 104.211.91.245
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/java.pem
+
+Host java-new-3
+HostName 52.172.179.242
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/java.pem
+
+Host java-4
+HostName 104.211.90.176
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/java.pem
+
+Host java-new-4
+HostName 52.172.190.171
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/java.pem
+
+Host java-5
+HostName 104.211.90.89
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/java.pem
+
+Host java-new-5
+HostName 52.172.194.19
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/java.pem
+
+Host ry-stageDB
+HostName 35.200.178.21
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-web-stage-master
+HostName 35.200.220.122
+#HostName 52.172.197.157
+#Port 50002
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host notification-1-azure
+HostName 52.172.218.140
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host notification-2-azure
+HostName 52.172.185.231
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+
+Host rserver-azure
+HostName 52.172.199.210
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host cp-azure
+HostName 52.172.192.155
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host pmm
+HostName 52.172.219.101
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host java-stage
+HostName 52.172.199.33
+#HostName 52.172.198.195
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/java.pem
+
+Host java-stage-1
+HostName 35.200.200.73
+#HostName 52.172.198.195
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/java.pem
+
+Host yatra-oxigen-new
+HostName 52.172.199.53
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host yatra-call-new
+HostName 52.172.198.157
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host ry-large
+HostName 52.172.214.210
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host ry-yatrachef
+HostName 52.172.202.99
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host bus-api-server-1-ind
+HostName 52.172.199.28
+#HostName 52.172.216.221
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host bus-api-server-2-ind
+HostName 52.172.192.152
+#HostName 52.172.216.221
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host agent-server
+#HostName 52.172.223.166
+HostName 104.211.98.68
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host agent-new-2
+HostName 52.172.140.216
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host refund-server-5
+HostName 104.211.75.11
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host refund3-server-5
+HostName 13.71.3.147
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host redis-azure
+HostName 52.172.194.17
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host telephony
+#HostName 35.154.223.249  
+HostName 52.172.223.148
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host merchandise2
+HostName 52.172.211.232
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host merchandise
+HostName 52.172.210.2
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host train-ticket-1-ind
+HostName 52.172.213.1
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host train-ticket-new-1-ind
+HostName 104.211.112.40
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host live-status-3-ind-5
+HostName 52.172.132.102
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host live-status-4-ind-5
+HostName 52.172.135.32
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host live-status-5-ind-5
+HostName 52.172.140.252
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host live-status-1-ind-5
+#HostName 13.71.23.77
+#Hostname 104.211.98.20
+HostName rylive1.centralindia.cloudapp.azure.com
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host live-status-2-ind-5
+#HostName 13.71.25.102
+#HostName 104.211.76.237
+HostName rylive2.centralindia.cloudapp.azure.com
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host mobile-api-server-4-ind
+HostName 52.172.222.97
+#HostName 52.172.221.118
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host busindia-api-server
+#HostName 35.154.193.82
+Hostname 52.172.218.202
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host gds-server-live
+HostName 52.172.186.242
+#Hostname 35.187.226.84
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host mobile-api-server-5-ind
+HostName 52.172.223.175
+#HostName 52.172.190.127
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host payment_api_server
+HostName 52.172.223.90
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/stelling-india.pem
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host payment-backup
+HostName 104.211.102.195
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host mobile-api-server-6-ind
+HostName 52.172.209.252
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host mobile-api-server-7-ind
+HostName 52.172.213.169
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host marketing-camp-1
+HostName 13.71.29.165
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host marketing-camp-2
+HostName 104.211.67.5
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+#Host railyatri-web-3-ind
+#HostName 52.172.220.106
+#User ubuntu
+#ForwardAgent yes
+#IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-web-4-ind-5
+HostName 52.172.130.171
+#HostName 104.211.75.68
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-web-5-ind-5
+HostName 104.211.103.172
+#HostName 104.211.93.196
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-web-6-ind-5
+HostName 104.211.93.196
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-web-7-ind-5
+HostName 52.172.139.207
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-web-8-ind-5
+HostName 52.172.128.118
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-web-9-ind-5
+HostName 52.172.138.201
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host pnr-rake-5
+#HostName 52.172.205.247
+#HostName 13.71.18.231
+HostName 104.211.91.81
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host pnr-rake-old
+#HostName 52.172.205.247
+HostName 13.71.18.231
+#HostName 104.211.91.81
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+ 
+Host sidekiq-1-azure
+HostName 52.172.218.249
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host sidekiq-2-azure
+HostName 52.172.197.81
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host sidekiq-3-azure
+HostName 52.172.210.137
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host mobile-api-server-stage-ind
+#HostName 52.172.209.174
+Hostname 35.200.140.84
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/stelling-india.pem_old
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host pnr-server-stage-ind
+#HostName 52.172.189.251 
+HostName 35.200.215.158
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host mobile-api-server-1-ind
+HostName 52.172.214.218
+#HostName 52.172.196.79
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host mobile-api-server-2-ind
+HostName 52.172.218.245
+#HostName 52.172.187.222
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host mobile-api-server-3-ind
+HostName 52.172.219.221
+#HostName 52.172.191.210
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-web-1-ind
+HostName 52.172.214.2
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-web-1-ind-5
+HostName 104.211.100.118
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host railyatri-web-2-ind-5
+HostName 104.211.98.30
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host railyatri-web-3-ind-5
+HostName 104.211.97.13
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+#Host railyatri-web-2-ind
+#HostName 52.172.219.139
+#User ubuntu
+#ForwardAgent yes
+#IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host search-server-ind
+HostName 13.71.28.253
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/stelling-india.pem
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host sa-server-2-ind-5
+HostName 52.140.101.176
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host sa-server-1-ind-5
+HostName 13.71.19.47
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host sa-server-4-ind-5
+HostName sa4new.centralindia.cloudapp.azure.com
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host sa-server-3-ind-5
+HostName 52.172.137.187
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host pnr-server-1-ind-5
+#HostName 13.71.4.134
+HostName rypnr1.centralindia.cloudapp.azure.com
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host pnr-server-2-ind-5
+#HostName 13.71.16.64
+HostName rypnr2.centralindia.cloudapp.azure.com
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host pnr-server-3-ind-5
+#HostName 13.71.3.190
+HostName rypnr3.centralindia.cloudapp.azure.com
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host sidekiq-api-1-ind
+HostName 52.172.215.43
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+Host admin-wisdom-new
+#HostName 52.66.77.7
+HostName 52.172.221.23
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/stelling-india.pem
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host railyatri-web-stage-ind
+#HostName 52.77.211.231
+HostName 35.200.142.95
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+
+Host web-8-new
+#HostName 52.77.211.231
+HostName 52.172.128.118
+User ubuntu
+ForwardAgent yes
+IdentityFile /home/ubuntu/.ssh/azure.pem
+
+ StrictHostKeyChecking no
+

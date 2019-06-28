@@ -1,0 +1,54 @@
+#!/bin/bash
+# Shell script to monitor disk space,CPU,RAM USAGE
+# It will send an email,if condition TRUE
+# -------------------------------------------------------------------------
+#                       Created By :- Neeraj Gautam 
+# -------------------------------------------------------------------------
+ADMIN="rajasekhar.reddy@railyatri.in"
+#R1="rakesh.yadav@railyatri.in"
+#R2="server-errors@railyatri.in"
+#R3="aparajita.m@stellingtech.com"
+#R4="kalpesh.vaghani@stellingtech.com"
+#R5="uday.pandey@railyatri.in"
+
+az_ss_count=`az vmss list-instances     --resource-group Production     --name SSLivestatus     --output table | wc -l  | cut -d'=' -f2 | cut -d "'" -f2`
+
+
+ count=$az_ss_count
+#count=6
+if [ $count -eq 3 ]
+then
+echo "Running out of memory \"$MEMORY%\" scale set counting alert $(date)" | mail -s "Scale set count ONE only" $ADMIN
+   
+elif [ $count -eq 4 ]
+then
+echo "Running out of memory \"$MEMORY%\" scale set counting alert $(date)" | mail -s "Scale set count two only" $ADMIN
+   
+elif [ $count -eq 5 ]
+then
+echo "Running out of memory \"$MEMORY%\" scale set counting alert $(date)" | mail -s "Scale set count three only" $ADMIN
+  
+
+  elif [ $count -eq 6 ]
+then
+echo "Running out of memory \"$MEMORY%\" scale set counting alert $(date)" | mail -s "Scale set count four only" $ADMIN
+  
+  else
+  echo "done"
+fi
+
+
+
+#MEMORY=$(free -m | awk 'NR==2{printf "%i%%\t\t", $3*100/$2 }'| cut -d'%' -f1)
+#DISK=$(df -h | awk '$NF=="/"{printf "%s\t\t", $5}'| cut -d'%' -f1)
+#CPU=$(top -bn1 | grep load | awk '{printf "%i%%\t\t\n", $(NF-2)}' | cut -d'%' -f1)
+#if (( $MEMORY > 75 )); then
+#    echo "Running out of memory \"$MEMORY%\" used on web-3-new server as on $(date)" | mail -s "Alert: LESS RAM IN web-3-new server" $ADMIN $R1 $R2 $R3        $R4 $R5
+#  fi
+
+#if (( $DISK > 90 )); then
+#    echo "DISK SPACE \"$DISK%\" used on web-3-new server as on $(date)" | mail -s "Alert: web-3-new server DISK SPACE LOW" $ADMIN $R1 $R2 $R3 $R4 $R5
+#  fi
+#if (( $CPU > 90 )); then
+#    echo "CPU % going high \"$CPU%\" used on web-3-new server as on $(date)" | mail -s "Alert: web-3-new server CPU % high" $ADMIN $R1 $R2 $R3 $R4 $R5
+#  fi

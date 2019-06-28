@@ -59,5 +59,7 @@ UPDATE `railyatri_production`.`food_images` SET `image_url`='https://images.rail
 
 SELECT table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024 / 1024), 2) `Size` FROM information_schema.TABLES WHERE table_schema = "railyatri_production";
 
+SELECT table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024 / 1024), 2) `Size` FROM information_schema.TABLES WHERE table_schema = "coa_productio" order by Size desc;
+
 
 

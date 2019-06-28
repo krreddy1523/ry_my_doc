@@ -1,0 +1,86 @@
+ADMIN="rajasekhar.reddy@railyatri.in"
+ADMIN1="quais.husain@railyatri.in"
+ADMIN2="aparajita.m@stellingtech.com"
+ADMIN3="kalpesh.vaghani@stellingtech.com"
+ADMIN4="rakesh.yadav@stellingtech.com "
+ADMIN5="uday.pandey@railyatri.in"
+
+
+ server=`scaleset_ls_4`
+
+ ram=`ssh $server 'sh /home/ubuntu/script/ram.sh' | awk 'NR==1{printf $1}'`       
+  
+ disk=`ssh $server 'sh /home/ubuntu/script/disk.sh' | awk 'NR==1{printf $1}'`
+ 
+
+ echo "$ram"
+
+ echo "$disk"
+
+ if [ $ram -ge 90 ]
+ then
+
+ echo "$server having less ram($ram useed). please check once" | mail -s "$server having less disk $ram " $ADMIN $ADMIN1 $ADMIN2 $ADMIN3 $ADMIN4 $ADMIN5
+
+ else
+   
+    echo "working fine"
+  fi
+
+  if [ $disk -ge 90 ]
+ then
+
+ echo "$server having less disk. please check once" | mail -s "$server having less disk $disk " $ADMIN $ADMIN1 $ADMIN2 $ADMIN3 $ADMIN4 $ADMIN5
+
+ else
+
+    echo "working fine"
+fi
+
+
+
+#!/bin/bash
+#
+number=1
+num=1
+#
+#cat .ssh/config | grep "HostName" | awk '{print $2}' > /home/railyatriin/ip
+#
+wc=$(cat /home/railyatriin/ip | wc -l )
+#
+while [ $number -le $wc ]
+do
+date
+ip=$(head -n $number /home/railyatriin/ip | tail -n 1)
+#echo "############################################################################"
+(ssh -i /home/railyatriin/.ssh/azure.pem ubuntu@$ip  hostname; exit)
+
+echo "                                                                            "
+
+(ssh -i /home/railyatriin/.ssh/azure.pem ubuntu@$ip df -Th; exit)
+
+echo "                                                                            "
+
+(ssh -i /home/railyatriin/.ssh/azure.pem ubuntu@$ip free -mh; exit)
+
+echo "                                                                            "
+
+(ssh -i /home/railyatriin/.ssh/azure.pem ubuntu@$ip lsb_release -a; exit)
+
+echo "                                                                            "
+
+(ssh -i /home/railyatriin/.ssh/azure.pem ubuntu@$ip passenger -v; exit)
+
+echo "                                                                            "
+
+(ssh -i /home/railyatriin/.ssh/azure.pem ubuntu@$ip ruby -v; exit)
+
+echo "                                                                            "
+
+echo "############################################################################"
+number=$(expr "$number" + "$num")
+#sleep 1;
+done
+
+
+
